@@ -4,20 +4,10 @@ func get_python_path() -> String:
 	var command = "where" if OS.get_name() == "Windows" else "which"
 	var result = []
 	var res = OS.execute(command, ["python"], result, true)
-
-
-	var regex = RegEx.new()
-	regex.compile("\\S+")
-	
-	var results = Array()
-	for element in regex.search_all(result[0]):
-		results.append(element.get_string())
-	
 	
 	if res == 0 and result.size() > 0:
-		return results[0]
+		return result[0].strip_edges()
 	else:
-		print("Error: Python not found in system PATH.")
 		return ""
 	
 	
