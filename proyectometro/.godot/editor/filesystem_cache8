@@ -1,0 +1,258 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731782191
+icon.svg::CompressedTexture2D::3452704895770316809::1731763052::1731782203::1::::<><>::
+::res://Assets/::1731775792
+::res://Assets/Fonts/::1731763052
+::res://Assets/Fonts/Lora/::1731782177
+Lora-Italic-VariableFont_wght.ttf::FontFile::8938176636163751119::1731763052::1731782198::1::::<><>::
+Lora-VariableFont_wght.ttf::FontFile::2492120378573509492::1731763052::1731782198::1::::<><>::
+OFL.txt::TextFile::-1::1731763052::0::1::::<><>::
+README.txt::TextFile::-1::1731763052::0::1::::<><>::
+::res://Assets/Fonts/Lora/static/::1731782177
+Lora-Bold.ttf::FontFile::6268272505788956580::1731763052::1731782198::1::::<><>::
+Lora-BoldItalic.ttf::FontFile::6144989031037018938::1731763052::1731782198::1::::<><>::
+Lora-Italic.ttf::FontFile::1989314802087582775::1731763052::1731782198::1::::<><>::
+Lora-Medium.ttf::FontFile::4592550462452564530::1731763052::1731782198::1::::<><>::
+Lora-MediumItalic.ttf::FontFile::7707987536049743459::1731763052::1731782198::1::::<><>::
+Lora-Regular.ttf::FontFile::4646156508238360468::1731763052::1731782198::1::::<><>::
+Lora-SemiBold.ttf::FontFile::3202393826929165969::1731763052::1731782198::1::::<><>::
+Lora-SemiBoldItalic.ttf::FontFile::3400863793108217657::1731763052::1731782198::1::::<><>::
+::res://Assets/Fonts/Roboto_Slab/::1731782177
+LICENSE.txt::TextFile::-1::1731763052::0::1::::<><>::
+README.txt::TextFile::-1::1731763052::0::1::::<><>::
+RobotoSlab-VariableFont_wght.ttf::FontFile::4255032676097047238::1731763052::1731782197::1::::<><>::
+::res://Assets/Fonts/Roboto_Slab/static/::1731782177
+RobotoSlab-Black.ttf::FontFile::7066813357997092204::1731763052::1731782197::1::::<><>::
+RobotoSlab-Bold.ttf::FontFile::7824675905550855378::1731763052::1731782197::1::::<><>::
+RobotoSlab-ExtraBold.ttf::FontFile::4150141159537013683::1731763052::1731782197::1::::<><>::
+RobotoSlab-ExtraLight.ttf::FontFile::3436837619731281218::1731763052::1731782197::1::::<><>::
+RobotoSlab-Light.ttf::FontFile::100055954895024614::1731763052::1731782197::1::::<><>::
+RobotoSlab-Medium.ttf::FontFile::92904555393055968::1731763052::1731782197::1::::<><>::
+RobotoSlab-Regular.ttf::FontFile::8896729266627291514::1731763052::1731782197::1::::<><>::
+RobotoSlab-SemiBold.ttf::FontFile::3199203391981985692::1731763052::1731782197::1::::<><>::
+RobotoSlab-Thin.ttf::FontFile::6410593167821793740::1731763052::1731782197::1::::<><>::
+::res://Assets/routes/::1731782178
+estacion.png::CompressedTexture2D::5195726057739541455::1731763051::1731782203::1::::<><>::
+gris.jpg::CompressedTexture2D::46138910613844508::1731763051::1731782203::1::::<><>::
+lineaA.jpeg::CompressedTexture2D::7746535814133560048::1731763051::1731782203::1::::<><>::
+lineaB.png::CompressedTexture2D::5964813315205169178::1731763051::1731782203::1::::<><>::
+lineaC.jpeg::CompressedTexture2D::49902522434138220::1731763051::1731782203::1::::<><>::
+lineaD.jpeg::CompressedTexture2D::8364867711964483701::1731763051::1731782203::1::::<><>::
+lineaE.jpeg::CompressedTexture2D::3686473169444656184::1731763051::1731782203::1::::<><>::
+map.png::CompressedTexture2D::4237937495766955927::1731763051::1731782203::1::::<><>::
+transbordo3.png::CompressedTexture2D::6757165982153051946::1731763051::1731782203::1::::<><>::
+::res://Assets/Sprites/::1731782178
+Subte-logo.svg::CompressedTexture2D::4463271402622068637::1731763052::1731782203::1::::<><>::
+::res://Assets/Sprites/Buttons/::1731782178
+button_rectangle.png::CompressedTexture2D::5713516457991381421::1731763052::1731782203::1::::<><>::
+button_rectangle_depth.png::CompressedTexture2D::5674986946119355620::1731763052::1731782203::1::::<><>::
+panel_rectangle_screws.png::CompressedTexture2D::6520954535263038651::1731763052::1731782203::1::::<><>::
+::res://Assets/Sprites/Mouse/::1731782178
+hand_closed.png::CompressedTexture2D::1245352978983338496::1731763052::1731782203::1::::<><>::
+hand_point.png::CompressedTexture2D::2925485546831378065::1731763052::1731782203::1::::<><>::
+pointer_c_shaded.png::CompressedTexture2D::8802711795259753335::1731763052::1731782203::1::::<><>::
+::res://Assets/Sprites/SelectCharacter/::1731782178
+characters menu.png::CompressedTexture2D::264150067077034097::1731763052::1731782203::1::::<><>::
+::res://Assets/TileSet/::1731782178
+MenuGris.png::CompressedTexture2D::6445717719890492572::1731763052::1731782203::1::::<><>::
+MenuRed.png::CompressedTexture2D::3225224833593565162::1731763052::1731782203::1::::<><>::
+::res://Personaje/::1731775789
+ChooseCharacter.tscn::PackedScene::1252441329292826572::1731775789::0::1::::<><>::uid://d07rpbolrkpt::::res://Assets/Sprites/SelectCharacter/characters menu.png<>uid://b0emhowcce23p::::res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf<>uid://cnnw1tgr5p1rl::::res://Assets/Sprites/Buttons/button_rectangle.png<>uid://cy52fy0vy8rpr::::res://Assets/Sprites/Buttons/panel_rectangle_screws.png<>uid://cm4ag881lmh61::::res://Assets/Sprites/Buttons/button_rectangle_depth.png<>uid://b4uboswskfatp::::res://Assets/Sprites/Subte-logo.svg
+::res://Personaje/characters/::1731775661
+character_male_d_2.tscn::PackedScene::5101028219823765373::1731775661::0::1::::<><>::uid://c821ddxeqo0ta::::res://Personaje/characters/Models/GLB format/character-male-d.glb
+::res://Personaje/characters/Models/::1731773576
+::res://Personaje/characters/Models/FBX format/::1731782178
+aid-cane-blind.fbx::PackedScene::6171627986892030376::1731763052::1731782201::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-cane-low-vision.fbx::PackedScene::2270019287340702383::1731763052::1731782201::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-cane.fbx::PackedScene::7836592126406380188::1731763052::1731782201::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-crutch.fbx::PackedScene::4469416179489307427::1731763052::1731782201::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-defibrillator-green.fbx::PackedScene::6659187313005349692::1731763052::1731782200::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-defibrillator-red.fbx::PackedScene::3009516654472295191::1731763052::1731782200::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-glasses.fbx::PackedScene::4477808868399110795::1731763052::1731782200::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-mask.fbx::PackedScene::610898093448420372::1731763052::1731782200::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-sunglasses.fbx::PackedScene::3122734440414152769::1731763052::1731782199::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid_hearing.fbx::PackedScene::7192419022865355339::1731763052::1731782198::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-a.fbx::PackedScene::4937069239804946717::1731763052::1731782198::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-b.fbx::PackedScene::8223105803888879632::1731763052::1731782198::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-c.fbx::PackedScene::3461777332909536681::1731763052::1731782198::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-d.fbx::PackedScene::2949724367436549410::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-e.fbx::PackedScene::2861152449365141287::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-female-f.fbx::PackedScene::8900296995888948243::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-a.fbx::PackedScene::5004541514087468304::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-b.fbx::PackedScene::5443851018978573206::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-c.fbx::PackedScene::966894308529500433::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-d.fbx::PackedScene::3952260054901261353::1731763052::1731782195::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-e.fbx::PackedScene::8714115942356218584::1731763052::1731782194::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+character-male-f.fbx::PackedScene::7878597725035563354::1731763052::1731782194::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+aid-defibrillator-red_0.png::CompressedTexture2D::2409546611126759064::1731781685::1731782203::1::::<><>::
+aid-defibrillator-green_0.png::CompressedTexture2D::3235751162648362441::1731781685::1731782203::1::::<><>::
+aid-crutch_0.png::CompressedTexture2D::2239721682826539111::1731781685::1731782203::1::::<><>::
+aid-cane_0.png::CompressedTexture2D::1555616757274435715::1731781685::1731782202::1::::<><>::
+aid-cane-low-vision_0.png::CompressedTexture2D::8353513419557262925::1731781685::1731782202::1::::<><>::
+aid-cane-blind_0.png::CompressedTexture2D::4089295951049906014::1731781685::1731782202::1::::<><>::
+character-female-a_0.png::CompressedTexture2D::1919978777709323185::1731781686::1731782202::1::::<><>::
+character-male-f_0.png::CompressedTexture2D::6593672616534496117::1731781686::1731782202::1::::<><>::
+character-male-e_0.png::CompressedTexture2D::4595359721051223843::1731781686::1731782202::1::::<><>::
+character-male-d_0.png::CompressedTexture2D::4243194782888745576::1731781686::1731782202::1::::<><>::
+character-male-c_0.png::CompressedTexture2D::8685507887375543586::1731781686::1731782202::1::::<><>::
+character-male-b_0.png::CompressedTexture2D::4198990688159385401::1731781686::1731782202::1::::<><>::
+character-male-a_0.png::CompressedTexture2D::3919443176419982137::1731781686::1731782202::1::::<><>::
+character-female-f_0.png::CompressedTexture2D::6963757605448424097::1731781687::1731782203::1::::<><>::
+character-female-e_0.png::CompressedTexture2D::2469451661338915333::1731781687::1731782203::1::::<><>::
+character-female-d_0.png::CompressedTexture2D::2499212085157577419::1731781687::1731782203::1::::<><>::
+character-female-c_0.png::CompressedTexture2D::7887024334107913728::1731781687::1731782203::1::::<><>::
+character-female-b_0.png::CompressedTexture2D::6862560941053979759::1731781687::1731782203::1::::<><>::
+aid_hearing_0.png::CompressedTexture2D::3916418889234940354::1731781687::1731782203::1::::<><>::
+aid-sunglasses_0.png::CompressedTexture2D::2993336510221937839::1731781689::1731782203::1::::<><>::
+aid-mask_0.png::CompressedTexture2D::6028661542652408106::1731781689::1731782203::1::::<><>::
+aid-glasses_0.png::CompressedTexture2D::8101715491863487919::1731781689::1731782203::1::::<><>::
+wheelchair-deluxe_0.png::CompressedTexture2D::579462334210941412::1731781686::1731782203::1::::<><>::
+wheelchair-power-deluxe_0.png::CompressedTexture2D::1603533032348482566::1731781686::1731782203::1::::<><>::
+wheelchair-power_0.png::CompressedTexture2D::6924489652690431286::1731781686::1731782203::1::::<><>::
+wheelchair_0.png::CompressedTexture2D::7138230161594080660::1731781686::1731782203::1::::<><>::
+wheelchair-deluxe.fbx::PackedScene::1901147541525783993::1731763052::1731782197::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+wheelchair-power-deluxe.fbx::PackedScene::7117954310900552400::1731763052::1731782197::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+wheelchair-power.fbx::PackedScene::2082473434240299144::1731763052::1731782196::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+wheelchair.fbx::PackedScene::1448641765288110834::1731763052::1731782196::1::::<><>::uid://ot43bw7uf00b::::res://Personaje/characters/Models/FBX format/Textures/colormap.png
+::res://Personaje/characters/Models/FBX format/Textures/::1731782178
+colormap.png::CompressedTexture2D::1023677871269087519::1731763052::1731782203::1::::<><>::
+::res://Personaje/characters/Models/GLB format/::1731782178
+aid-cane-blind.glb::PackedScene::852178718105117171::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-cane-low-vision.glb::PackedScene::2962815867565968423::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-cane.glb::PackedScene::2731891949624007229::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-crutch.glb::PackedScene::1999833838480818678::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-defibrillator-green.glb::PackedScene::3877360496799246640::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-defibrillator-red.glb::PackedScene::4362639863462301761::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-glasses.glb::PackedScene::4152772162341617118::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-mask.glb::PackedScene::6396141665939286929::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid-sunglasses.glb::PackedScene::2308697280588764167::1731763052::1731782196::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+aid_hearing.glb::PackedScene::8134469652244661099::1731763052::1731782195::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-a.glb::PackedScene::5450612020856346192::1731763052::1731782195::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-b.glb::PackedScene::511194482090560002::1731763052::1731782195::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-c.glb::PackedScene::7234810715209385629::1731763052::1731782193::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-d.glb::PackedScene::1766405346010973498::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-e.glb::PackedScene::4134517989400563790::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-female-f.glb::PackedScene::3245272475304816799::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-a.glb::PackedScene::4097595426813315132::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-b.glb::PackedScene::2603298502157411986::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-c.glb::PackedScene::6769310928175848144::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-d.glb::PackedScene::7146395599298782362::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-e.glb::PackedScene::3337042262157724094::1731763052::1731782194::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character-male-f.glb::PackedScene::3617738959714582566::1731763052::1731782201::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+character_female_b.gd::GDScript::-1::1731763052::0::1::::<>Node3D<>::
+character_male_d.gd::GDScript::-1::1731763052::0::1::::<>Node3D<>::
+character_male_e.gd::GDScript::-1::1731763052::0::1::::<>Node3D<>::
+aid-crutch_colormap.png::CompressedTexture2D::2925944113481625210::1731781685::1731782203::1::::<><>::
+aid-cane_colormap.png::CompressedTexture2D::1563003099379617136::1731781685::1731782203::1::::<><>::
+aid-cane-low-vision_colormap.png::CompressedTexture2D::3147621219712566316::1731781685::1731782203::1::::<><>::
+aid-cane-blind_colormap.png::CompressedTexture2D::1837140358972754124::1731781685::1731782203::1::::<><>::
+character-male-f_colormap.png::CompressedTexture2D::8948781611767712602::1731781687::1731782203::1::::<><>::
+character-male-e_colormap.png::CompressedTexture2D::7637441610350185409::1731781688::1731782203::1::::<><>::
+character-male-d_colormap.png::CompressedTexture2D::2264328786365931649::1731781688::1731782203::1::::<><>::
+character-male-c_colormap.png::CompressedTexture2D::6278373521012892554::1731781688::1731782203::1::::<><>::
+character-male-b_colormap.png::CompressedTexture2D::5383530420096684476::1731781688::1731782203::1::::<><>::
+character-male-a_colormap.png::CompressedTexture2D::4676843831603324964::1731781688::1731782203::1::::<><>::
+character-female-f_colormap.png::CompressedTexture2D::3509229425120724892::1731781688::1731782203::1::::<><>::
+character-female-e_colormap.png::CompressedTexture2D::3304949716599882604::1731781688::1731782203::1::::<><>::
+character-female-d_colormap.png::CompressedTexture2D::6341999582650226109::1731781688::1731782203::1::::<><>::
+character-female-c_colormap.png::CompressedTexture2D::3941914288126948497::1731781688::1731782203::1::::<><>::
+character-female-b_colormap.png::CompressedTexture2D::6612604150307919689::1731781688::1731782203::1::::<><>::
+character-female-a_colormap.png::CompressedTexture2D::3529782575467514080::1731781688::1731782203::1::::<><>::
+aid_hearing_colormap.png::CompressedTexture2D::4326278820310957741::1731781688::1731782203::1::::<><>::
+aid-sunglasses_colormap.png::CompressedTexture2D::73172049392400177::1731781689::1731782203::1::::<><>::
+aid-mask_colormap.png::CompressedTexture2D::3847782845902589484::1731781689::1731782203::1::::<><>::
+aid-glasses_colormap.png::CompressedTexture2D::6640723675451379056::1731781689::1731782203::1::::<><>::
+aid-defibrillator-red_colormap.png::CompressedTexture2D::6545061055697986481::1731781689::1731782202::1::::<><>::
+aid-defibrillator-green_colormap.png::CompressedTexture2D::7267986689398005754::1731781689::1731782202::1::::<><>::
+wheelchair-deluxe_colormap.png::CompressedTexture2D::1934446912268026274::1731781687::1731782202::1::::<><>::
+wheelchair-power-deluxe_colormap.png::CompressedTexture2D::8088588558372382096::1731781687::1731782202::1::::<><>::
+wheelchair-power_colormap.png::CompressedTexture2D::5823438144316801014::1731781687::1731782202::1::::<><>::
+wheelchair_colormap.png::CompressedTexture2D::1919350658946928663::1731781687::1731782202::1::::<><>::
+wheelchair-deluxe.glb::PackedScene::1038049038882495742::1731763052::1731782197::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+wheelchair-power-deluxe.glb::PackedScene::7025303780011571284::1731763052::1731782197::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+wheelchair-power.glb::PackedScene::6041085019504045822::1731763052::1731782197::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+wheelchair.glb::PackedScene::7322179921537921986::1731763052::1731782202::1::::<><>::uid://bmx7clbe6w3ki::::res://Personaje/characters/Models/GLB format/Textures/colormap.png
+::res://Personaje/characters/Models/GLB format/Textures/::1731782178
+colormap.png::CompressedTexture2D::3278114590574922668::1731763052::1731782202::1::::<><>::
+::res://Personaje/characters/Models/OBJ format/::1731782178
+aid-cane-blind.obj::Mesh::7131219412649981435::1731763052::1731782202::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-cane-low-vision.obj::Mesh::5438360498717337606::1731763052::1731782202::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-cane.obj::Mesh::1162311719011237323::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-crutch.obj::Mesh::7688295709213216950::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-defibrillator-green.obj::Mesh::958511954441672390::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-defibrillator-red.obj::Mesh::7072310928056609255::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-glasses.obj::Mesh::8856196954169961065::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-mask.obj::Mesh::5964673637509396105::1731763052::1731782201::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid-sunglasses.obj::Mesh::4946655333393077156::1731763052::1731782196::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+aid_hearing.obj::Mesh::9119734661604756378::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-a.obj::Mesh::2555977796301523068::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-b.obj::Mesh::4760630673882003215::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-c.obj::Mesh::9005474155872103730::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-d.obj::Mesh::5965580772658679447::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-e.obj::Mesh::1082112528064866007::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-female-f.obj::Mesh::2587856749169149267::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-a.obj::Mesh::5648958373478716958::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-b.obj::Mesh::4184732299827216841::1731763052::1731782197::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-c.obj::Mesh::8088644145915150372::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-d.obj::Mesh::2665430717267923200::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-e.obj::Mesh::3161050013114284429::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+character-male-f.obj::Mesh::3845060717520051657::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+wheelchair-deluxe.obj::Mesh::153209047254632931::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+wheelchair-power-deluxe.obj::Mesh::3182444149572473145::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+wheelchair-power.obj::Mesh::5896999272391741822::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+wheelchair.obj::Mesh::1033869686100143486::1731763052::1731782193::1::::<><>::uid://dnjiignxe3v0m::::res://Personaje/characters/Models/OBJ format/Textures/colormap.png
+::res://Personaje/characters/Models/OBJ format/Textures/::1731782178
+colormap.png::CompressedTexture2D::8090796776727677042::1731763052::1731782202::1::::<><>::
+::res://Personaje/characters/Previews/::1731782178
+aid-cane-blind.png::CompressedTexture2D::4131138861826092780::1731763052::1731782202::1::::<><>::
+aid-cane-low-vision.png::CompressedTexture2D::3641390097338029254::1731763052::1731782202::1::::<><>::
+aid-cane.png::CompressedTexture2D::609624041491862158::1731763052::1731782202::1::::<><>::
+aid-crutch.png::CompressedTexture2D::7269864709112825676::1731763052::1731782202::1::::<><>::
+aid-defibrillator-green.png::CompressedTexture2D::6297947424365510063::1731763052::1731782202::1::::<><>::
+aid-defibrillator-red.png::CompressedTexture2D::5813906017139022819::1731763052::1731782202::1::::<><>::
+aid-glasses.png::CompressedTexture2D::657392955717958449::1731763052::1731782202::1::::<><>::
+aid-mask.png::CompressedTexture2D::2211072639124101282::1731763052::1731782202::1::::<><>::
+aid-sunglasses.png::CompressedTexture2D::7499498001970949524::1731763052::1731782202::1::::<><>::
+aid_hearing.png::CompressedTexture2D::759746722462196491::1731763052::1731782202::1::::<><>::
+character-female-a.png::CompressedTexture2D::376672914747887727::1731763052::1731782202::1::::<><>::
+character-female-b.png::CompressedTexture2D::4126361893608608230::1731763052::1731782202::1::::<><>::
+character-female-c.png::CompressedTexture2D::3429896060790542345::1731763052::1731782202::1::::<><>::
+character-female-d.png::CompressedTexture2D::906474876427188342::1731763052::1731782202::1::::<><>::
+character-female-e.png::CompressedTexture2D::709777628065970819::1731763052::1731782202::1::::<><>::
+character-female-f.png::CompressedTexture2D::4701063728257767174::1731763052::1731782202::1::::<><>::
+character-male-a.png::CompressedTexture2D::2946713512718669730::1731763052::1731782202::1::::<><>::
+character-male-b.png::CompressedTexture2D::1736635589599354479::1731763052::1731782202::1::::<><>::
+character-male-c.png::CompressedTexture2D::1366228585985805196::1731763052::1731782202::1::::<><>::
+character-male-d.png::CompressedTexture2D::8880148406800688779::1731763052::1731782202::1::::<><>::
+character-male-e.png::CompressedTexture2D::3004436214843467561::1731763052::1731782202::1::::<><>::
+character-male-f.png::CompressedTexture2D::6451086531304149875::1731763052::1731782202::1::::<><>::
+wheelchair-deluxe.png::CompressedTexture2D::1865435910066147678::1731763052::1731782202::1::::<><>::
+wheelchair-power-deluxe.png::CompressedTexture2D::6524837649098241008::1731763052::1731782202::1::::<><>::
+wheelchair-power.png::CompressedTexture2D::9196845408429622415::1731763052::1731782202::1::::<><>::
+wheelchair.png::CompressedTexture2D::9020758576070809720::1731763052::1731782202::1::::<><>::
+::res://Personaje/characters/sprites/::1731782178
+female-removebg-preview.png::CompressedTexture2D::6529217878897392505::1731763052::1731782202::1::::<><>::
+male-removebg-preview.png::CompressedTexture2D::4248960558348758739::1731763052::1731782202::1::::<><>::
+::res://Scenes/::1731782170
+mapa.tscn::PackedScene::-1::1731763051::0::1::::<><>::
+PythonTesting.tscn::PackedScene::-1::1731763051::0::1::::<><>::
+SeleccionEstaciones.tscn::PackedScene::3154044853858779355::1731782170::0::1::::<><>::res://Scripts/Gui/mostrar_estaciones_origen_destino.gd<>res://Scripts/Gui/custom_cursor.gd<>res://Scripts/Gui/lista_estaciones.gd<>uid://b0emhowcce23p::::res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf<>uid://cnnw1tgr5p1rl::::res://Assets/Sprites/Buttons/button_rectangle.png<>uid://cy52fy0vy8rpr::::res://Assets/Sprites/Buttons/panel_rectangle_screws.png<>uid://cm4ag881lmh61::::res://Assets/Sprites/Buttons/button_rectangle_depth.png<>uid://b4uboswskfatp::::res://Assets/Sprites/Subte-logo.svg<>uid://b1m5hgmjg7qn4::::res://Assets/routes/map.png<>uid://dmh5cvmnge2it::::res://Scenes/Gui/mapa/estación.tscn<>uid://dimqkv6emw57i::::res://Assets/routes/lineaA.jpeg<>uid://wl5vxq4jtsu::::res://Assets/routes/gris.jpg<>uid://cq8nusa8ravxi::::res://Assets/routes/lineaB.png<>uid://c3jhsigjindeo::::res://Assets/routes/transbordo3.png<>uid://yf5fwu8l6w3::::res://Assets/routes/lineaC.jpeg<>uid://drgafcl8emknt::::res://Assets/routes/lineaD.jpeg<>uid://bsr0w6ytalsbw::::res://Assets/routes/lineaE.jpeg
+::res://Scenes/Gui/::1731782169
+StartMenuScreen.tscn::PackedScene::3417964172759329551::1731782169::0::1::::<><>::res://Scripts/Gui/start_menu.gd<>res://Scripts/Gui/custom_cursor.gd<>uid://blaeh4sddcps::::res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf<>uid://b4uboswskfatp::::res://Assets/Sprites/Subte-logo.svg<>uid://b0emhowcce23p::::res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf<>uid://cx3ma8wma5p05::::res://Assets/TileSet/MenuGris.png<>uid://bl7k8m7uci1e1::::res://Assets/TileSet/MenuRed.png<>uid://cnnw1tgr5p1rl::::res://Assets/Sprites/Buttons/button_rectangle.png<>uid://cm4ag881lmh61::::res://Assets/Sprites/Buttons/button_rectangle_depth.png<>uid://cy52fy0vy8rpr::::res://Assets/Sprites/Buttons/panel_rectangle_screws.png
+::res://Scenes/Gui/mapa/::1731775772
+estación.tscn::PackedScene::8017805022511787183::1731775485::0::1::::<><>::uid://cga334rxk382v::::res://Assets/routes/estacion.png
+mapa.tscn::PackedScene::3925246167019541714::1731775772::0::1::::<><>::uid://b1m5hgmjg7qn4::::res://Assets/routes/map.png<>uid://dmh5cvmnge2it::::res://Scenes/Gui/mapa/estación.tscn<>uid://dimqkv6emw57i::::res://Assets/routes/lineaA.jpeg<>uid://drgafcl8emknt::::res://Assets/routes/lineaD.jpeg<>uid://cq8nusa8ravxi::::res://Assets/routes/lineaB.png<>uid://yf5fwu8l6w3::::res://Assets/routes/lineaC.jpeg<>uid://bsr0w6ytalsbw::::res://Assets/routes/lineaE.jpeg
+::res://Scenes/Gui/Transition/::1731775772
+diamond.gdshader::Shader::-1::1731763052::0::1::::<><>::
+transition.gd::GDScript::-1::1731763052::0::1::::<>CanvasLayer<>::
+Transition.tscn::PackedScene::2122875642043150302::1731775772::0::1::::<><>::res://Scenes/Gui/Transition/transition.gd<>res://Scenes/Gui/Transition/diamond.gdshader
+::res://Scripts/::1731774450
+GlobalData.gd::GDScript::-1::1731774388::0::1::::<>Node<>::
+python_call.gd::GDScript::-1::1731774388::0::1::::<>Node<>::
+transition.gd::GDScript::-1::1731763052::0::1::::<>CanvasLayer<>::
+::res://Scripts/Gui/::1731781698
+custom_cursor.gd::GDScript::-1::1731763052::0::1::::<>Control<>::
+join_menu_screen.gd::GDScript::-1::1731763052::0::1::::<>Control<>::
+lista_estaciones.gd::GDScript::-1::1731763052::0::1::::<>Node<>::
+mostrar_estaciones_origen_destino.gd::GDScript::-1::1731781698::0::1::::<>Node<>::
+start_menu.gd::GDScript::-1::1731775177::0::1::::<>Control<>::

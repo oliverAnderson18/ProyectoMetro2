@@ -1,0 +1,3 @@
+res://Scenes/Gui/StartMenuScreen.tscn
+res://Scenes/SeleccionEstaciones.tscn
+res://Scripts/Gui/mostrar_estaciones_origen_destino.gd

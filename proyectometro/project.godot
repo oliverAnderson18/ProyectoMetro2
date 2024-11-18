@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ProyectoMetro"
+run/main_scene="res://Scenes/Gui/StartMenuScreen.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Transition="*res://Scenes/Gui/Transition/Transition.tscn"
+GlobalData="*res://Scripts/GlobalData.gd"
+
+[display]
+
+mouse_cursor/custom_image="res://Assets/Sprites/Mouse/pointer_c_shaded.png"
+
+[dotnet]
+
+project/assembly_name="ProyectoMetro"

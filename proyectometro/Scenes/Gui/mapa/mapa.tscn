@@ -1,0 +1,414 @@
+[gd_scene load_steps=8 format=3 uid="uid://bv6oh35yftx5s"]
+
+[ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://Assets/routes/map.png" id="1_85bvt"]
+[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://Scenes/Gui/mapa/estación.tscn" id="2_ajnup"]
+[ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://Assets/routes/lineaA.jpeg" id="3_g5psy"]
+[ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://Assets/routes/lineaD.jpeg" id="3_h7gsh"]
+[ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://Assets/routes/lineaB.png" id="4_j3why"]
+[ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://Assets/routes/lineaC.jpeg" id="5_k5vbb"]
+[ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="7_o0ksd"]
+
+[node name="Mapa" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(547, 565)
+texture = ExtResource("1_85bvt")
+
+[node name="lineaA" type="Node2D" parent="."]
+
+[node name="estaciones" type="Node2D" parent="lineaA"]
+
+[node name="estación7" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(-17, 281)
+
+[node name="estación8" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(63, 310)
+
+[node name="estación9" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(233, 373)
+
+[node name="estación10" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(399, 457)
+
+[node name="estación11" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(530, 503)
+
+[node name="estación13" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(650, 548)
+
+[node name="estación14" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(769, 592)
+
+[node name="estación15" parent="lineaA/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(858, 638)
+
+[node name="conexiones" type="Node2D" parent="lineaA"]
+
+[node name="LineaA" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(23.1503, 295.546)
+rotation = 0.348251
+scale = Vector2(0.401822, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA2" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(148.196, 342.255)
+rotation = 0.344376
+scale = Vector2(0.818388, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA3" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(291.724, 394.837)
+rotation = 0.352052
+scale = Vector2(0.600247, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA4" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(362.875, 431.382)
+rotation = 0.903892
+scale = Vector2(0.19959, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA5" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(388, 452)
+rotation = 0.364711
+scale = Vector2(0.14894, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA6" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(464.628, 480.488)
+rotation = 0.33998
+scale = Vector2(0.658911, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA7" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(588, 525)
+rotation = 0.356886
+scale = Vector2(0.589957, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA8" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(709.501, 569.872)
+rotation = 0.355048
+scale = Vector2(0.578248, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA9" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(781.054, 596.346)
+rotation = 0.348243
+scale = Vector2(0.130087, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA10" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(802, 612)
+rotation = 0.890057
+scale = Vector2(0.153539, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="LineaA11" type="Sprite2D" parent="lineaA/conexiones"]
+position = Vector2(836.847, 631.203)
+rotation = 0.311208
+scale = Vector2(0.26194, 1)
+texture = ExtResource("3_g5psy")
+
+[node name="lineaB" type="Node2D" parent="."]
+
+[node name="estaciones" type="Node2D" parent="lineaB"]
+
+[node name="estación2" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(110, 119)
+
+[node name="estación" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(323, 208)
+
+[node name="estación3" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(494, 270)
+
+[node name="estación4" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(649, 328)
+
+[node name="estación5" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(860, 407)
+
+[node name="estación6" parent="lineaB/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(1007, 463)
+
+[node name="conexiones" type="Node2D" parent="lineaB"]
+
+[node name="LineaB" type="Sprite2D" parent="lineaB/conexiones"]
+position = Vector2(215.362, 164.08)
+rotation = 0.396201
+scale = Vector2(1.22277, 1)
+texture = ExtResource("4_j3why")
+
+[node name="LineaB2" type="Sprite2D" parent="lineaB/conexiones"]
+position = Vector2(407.879, 239.857)
+rotation = 0.351186
+scale = Vector2(0.965381, 1)
+texture = ExtResource("4_j3why")
+
+[node name="LineaB3" type="Sprite2D" parent="lineaB/conexiones"]
+position = Vector2(572, 299)
+rotation = 0.354402
+scale = Vector2(0.860354, 1)
+texture = ExtResource("4_j3why")
+
+[node name="LineaB4" type="Sprite2D" parent="lineaB/conexiones"]
+position = Vector2(753.609, 367.37)
+rotation = 0.366225
+scale = Vector2(1.1853, 1)
+texture = ExtResource("4_j3why")
+
+[node name="LineaB5" type="Sprite2D" parent="lineaB/conexiones"]
+position = Vector2(931.481, 434.514)
+rotation = 0.361262
+scale = Vector2(0.838327, 1)
+texture = ExtResource("4_j3why")
+
+[node name="lineaC" type="Node2D" parent="."]
+
+[node name="conexiones" type="Node2D" parent="lineaC"]
+
+[node name="LineaC2" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(806.347, 225.607)
+rotation = -1.18466
+scale = Vector2(0.883598, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(970.54, 35.7674)
+rotation = -0.702687
+scale = Vector2(0.890281, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC3" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(868.119, 120.532)
+rotation = -0.686951
+scale = Vector2(0.389858, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC4" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(719.49, 395.348)
+rotation = -0.204113
+scale = Vector2(0.241968, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC5" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(757.052, 347.368)
+rotation = -1.19002
+scale = Vector2(0.509598, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC6" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(607.675, 463.819)
+rotation = -1.24537
+scale = Vector2(0.67357, 0.996878)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC7" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(680.513, 391.318)
+rotation = 0.364897
+scale = Vector2(0.249479, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC8" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(645.062, 392.263)
+rotation = -0.516205
+scale = Vector2(0.210152, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC9" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(561, 582)
+rotation = -1.15775
+scale = Vector2(0.660692, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC10" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(492, 747)
+rotation = -1.18607
+scale = Vector2(1.12824, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC11" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(420, 923)
+rotation = -1.18603
+scale = Vector2(0.812649, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC12" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(281.006, 1118.82)
+rotation = -1.17839
+scale = Vector2(0.475881, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC13" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(378.679, 1024.89)
+rotation = -1.18249
+scale = Vector2(0.257384, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="LineaC14" type="Sprite2D" parent="lineaC/conexiones"]
+position = Vector2(334.247, 1061.35)
+rotation = -0.401434
+scale = Vector2(0.41495, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="estaciones" type="Node2D" parent="lineaC"]
+
+[node name="estación18" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(701, 399)
+
+[node name="estación32" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(773, 307)
+
+[node name="estación33" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(900, 94)
+
+[node name="estación34" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(1035, -19)
+
+[node name="estación12" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(587, 525)
+
+[node name="estación30" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(263, 1162)
+
+[node name="estación26" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(387, 1001)
+
+[node name="estación25" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(449, 851)
+
+[node name="estación31" parent="lineaC/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(534, 643)
+
+[node name="lineaD" type="Node2D" parent="."]
+
+[node name="conexiones" type="Node2D" parent="lineaD"]
+
+[node name="LineaD" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(319.036, 4.98956)
+rotation = 0.395214
+scale = Vector2(0.755336, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="LineaD2" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(483.202, 70.3808)
+rotation = 0.356083
+scale = Vector2(0.771607, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="LineaD3" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(571.605, 155.38)
+rotation = 1.33182
+scale = Vector2(0.582963, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="LineaD4" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(642, 343)
+rotation = 0.746183
+scale = Vector2(0.37548, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="LineaD5" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(601.617, 268.55)
+rotation = 1.31284
+scale = Vector2(0.497289, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="LineaD6" type="Sprite2D" parent="lineaD/conexiones"]
+position = Vector2(734, 469)
+rotation = 1.00377
+scale = Vector2(1.09383, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="estaciones" type="Node2D" parent="lineaD"]
+
+[node name="estación22" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+z_index = 1
+position = Vector2(239, -29)
+
+[node name="estación21" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+z_index = 1
+position = Vector2(402, 39)
+
+[node name="estación20" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(588, 220)
+
+[node name="estación19" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(671, 370)
+
+[node name="estación16" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(796, 563)
+
+[node name="lineaE" type="Node2D" parent="."]
+
+[node name="conexiones" type="Node2D" parent="lineaE"]
+
+[node name="LineaE" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(-36.9386, 831.946)
+rotation = 0.354947
+scale = Vector2(0.885066, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE2" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(140, 898)
+rotation = 0.362667
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE3" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(254, 942)
+rotation = 0.394234
+scale = Vector2(0.24375, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE4" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(319.858, 943.963)
+rotation = -0.150047
+scale = Vector2(0.46934, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE5" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(386.966, 886.904)
+rotation = -1.11978
+scale = Vector2(0.593919, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE6" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(427.527, 797.837)
+rotation = -1.17114
+scale = Vector2(0.456294, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE7" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(524.36, 730.648)
+rotation = -0.338533
+scale = Vector2(0.8709, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="LineaE8" type="Sprite2D" parent="lineaE/conexiones"]
+position = Vector2(688, 669)
+rotation = -0.380683
+scale = Vector2(0.898376, 1)
+texture = ExtResource("7_o0ksd")
+
+[node name="estaciones" type="Node2D" parent="lineaE"]
+
+[node name="estación17" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(774, 633)
+
+[node name="estación23" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(606, 702)
+
+[node name="estación24" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(412, 835)
+
+[node name="estación27" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(233, 932)
+
+[node name="estación28" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(48, 862)
+
+[node name="estación29" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(-119, 802)
+
+[node name="transbordos" type="Node2D" parent="."]
