@@ -22,6 +22,8 @@ GlobalData="*res://Scripts/GlobalData.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Assets/Sprites/Mouse/pointer_c_shaded.png"
 
 [dotnet]
