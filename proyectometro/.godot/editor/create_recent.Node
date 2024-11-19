@@ -1,4 +1,8 @@
 Label
 Control
 Container
+SpinBox
+VBoxContainer
+Label
+OptionButton
 Panel

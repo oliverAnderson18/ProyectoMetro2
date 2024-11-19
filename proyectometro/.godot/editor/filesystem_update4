@@ -1,5 +1,4 @@
-res://Scenes/SeleccionEstaciones.tscn
-res://Scripts/Rutas/nodo_ruta.gd
 res://Scenes/Gui/StartMenuScreen.tscn
+res://Scenes/SeleccionEstaciones.tscn
 res://Scenes/Gui/GeneradorPNG/Test.tscn
 res://Scenes/mapa.tscn

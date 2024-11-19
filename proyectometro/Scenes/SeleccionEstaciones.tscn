@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=26 format=3 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://Assets/routes/lineaC.jpeg" id="13_uiy4y"]
 [ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://Assets/routes/lineaD.jpeg" id="14_r8cj4"]
 [ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="15_7scxj"]
+[ext_resource type="Script" path="res://Scripts/seleccionar_hora.gd" id="18_jkmt0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
 
@@ -918,6 +919,34 @@ position = Vector2(836.847, 631.203)
 rotation = 0.311208
 scale = Vector2(0.26194, 1)
 texture = ExtResource("11_26jix")
+
+[node name="SeleccionarHora" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 439.0
+offset_right = 318.0
+offset_bottom = 611.0
+script = ExtResource("18_jkmt0")
+
+[node name="Label" type="Label" parent="SeleccionarHora"]
+layout_mode = 2
+text = "Seleccione el día:"
+
+[node name="SeleccionDia" type="OptionButton" parent="SeleccionarHora"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="SeleccionarHora"]
+layout_mode = 2
+text = "Seleccione la hora:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SeleccionarHora"]
+layout_mode = 2
+
+[node name="Spinbox_Hora" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spinbox_Minutos" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
+layout_mode = 2
 
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Destino/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
