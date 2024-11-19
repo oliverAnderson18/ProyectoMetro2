@@ -2,5 +2,3 @@ res://Scenes/Gui/StartMenuScreen.tscn
 res://Scenes/SeleccionEstaciones.tscn
 res://Scenes/Gui/GeneradorPNG/Test.tscn
 res://Scenes/mapa.tscn
-res://Scripts/python_call.gd
-res://Scripts/seleccionar_hora.gd

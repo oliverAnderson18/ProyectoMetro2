@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=23 format=3 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Assets/Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
 [ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Assets/Sprites/Subte-logo.svg" id="8_bsq8l"]
 [ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://Assets/routes/map.png" id="9_1t8yq"]
-[ext_resource type="FontFile" uid="uid://c7xhnbmlovubs" path="res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Black.ttf" id="9_y13ai"]
 [ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://Scenes/Gui/mapa/estación.tscn" id="10_7uol4"]
 [ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://Assets/routes/lineaA.jpeg" id="11_26jix"]
 [ext_resource type="Texture2D" uid="uid://wl5vxq4jtsu" path="res://Assets/routes/gris.jpg" id="11_d3qc0"]
@@ -19,12 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://Assets/routes/lineaC.jpeg" id="13_uiy4y"]
 [ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://Assets/routes/lineaD.jpeg" id="14_r8cj4"]
 [ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="15_7scxj"]
-[ext_resource type="Script" path="res://Scripts/seleccionar_hora.gd" id="18_jkmt0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x7t5"]
-texture = ExtResource("5_dkicf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1urt"]
 texture = ExtResource("4_y3doi")
@@ -61,22 +56,17 @@ grow_vertical = 2
 color = Color(0.299211, 0.388755, 0.536115, 1)
 
 [node name="NodoRuta" type="Control" parent="."]
-layout_mode = 1
-anchor_right = 0.347
-anchor_bottom = 1.0
-offset_right = 0.255981
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("3_62o8g")
 
 [node name="SeleccionarRuta" type="VBoxContainer" parent="NodoRuta"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 0.273
-anchor_right = 0.865
-anchor_bottom = 0.432
-offset_top = 0.095993
-offset_right = -3.05176e-05
-offset_bottom = 0.0639954
+layout_mode = 0
+offset_left = 60.0
+offset_top = 177.0
+offset_right = 346.0
+offset_bottom = 280.0
 
 [node name="Origen" type="VBoxContainer" parent="NodoRuta/SeleccionarRuta"]
 layout_mode = 2
@@ -101,15 +91,11 @@ text = "Seleccione la estación de destino:"
 layout_mode = 2
 
 [node name="CalcularRuta" type="Button" parent="NodoRuta"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 0.466
-anchor_right = 0.865
-anchor_bottom = 0.552
-offset_top = 0.0319824
-offset_right = -3.05176e-05
-offset_bottom = 0.303955
+layout_mode = 2
+offset_left = 60.0
+offset_top = 332.0
+offset_right = 346.0
+offset_bottom = 379.0
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
@@ -118,28 +104,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kavc7")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8s5rr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_8x7t5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m1urt")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l3kuy")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5qosc")
 text = "Calcular ruta"
-
-[node name="AvisoMismasEstaciones" type="Label" parent="NodoRuta"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.157
-anchor_top = 0.557
-anchor_right = 0.865
-anchor_bottom = 0.593
-offset_left = 0.199997
-offset_top = 0.0639648
-offset_right = -3.05176e-05
-offset_bottom = -0.264038
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("9_y13ai")
-text = "Elija un origen y destino distinto"
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -920,33 +888,5 @@ rotation = 0.311208
 scale = Vector2(0.26194, 1)
 texture = ExtResource("11_26jix")
 
-[node name="SeleccionarHora" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 439.0
-offset_right = 318.0
-offset_bottom = 611.0
-script = ExtResource("18_jkmt0")
-
-[node name="Label" type="Label" parent="SeleccionarHora"]
-layout_mode = 2
-text = "Seleccione el día:"
-
-[node name="SeleccionDia" type="OptionButton" parent="SeleccionarHora"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="SeleccionarHora"]
-layout_mode = 2
-text = "Seleccione la hora:"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SeleccionarHora"]
-layout_mode = 2
-
-[node name="Spinbox_Hora" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
-layout_mode = 2
-
-[node name="Spinbox_Minutos" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
-layout_mode = 2
-
-[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
-[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Destino/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
+[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="." method="_on_lista_estaciones_item_selected"]
+[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Destino/listaEstaciones" to="NodoRuta/SeleccionarRuta" method="_on_lista_estaciones_item_selected"]
