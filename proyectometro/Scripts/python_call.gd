@@ -6,6 +6,13 @@ func get_python_path() -> String:
 	var res = OS.execute(command, ["python"], result, true)
 	print("result", result)
 	
+	var regex = RegEx.new()
+	regex.compile("\\S+")
+	var results = Array()
+	for element in regex.search_all(result[0]):
+		results.append(element.get_string())
+	print(results)
+	
 	if res == 0 and result.size() > 0:
 		return result[0].strip_edges()
 	else:
