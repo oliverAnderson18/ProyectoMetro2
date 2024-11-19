@@ -8,14 +8,14 @@ func get_python_path() -> String:
 	if res == 0 and result.size() > 0:
 		return result[0].strip_edges()
 	else:
+		print("Error: Unable to find Python executable.")
 		return ""
 	
 	
 func run_python_script(source_id, target_id):
 	var python_path = get_python_path()
-	print(python_path)
+
 	if python_path == "":
-		print("Error: Unable to find Python executable.")
 		return
 		
 	var output = []
