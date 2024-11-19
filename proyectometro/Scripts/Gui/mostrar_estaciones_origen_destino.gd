@@ -60,8 +60,16 @@ func on_calcular_ruta_button_pressed():
 	var id_origen = origen.get_selected_id()
 	var id_destino = destino.get_selected_id()
 	
+	var day_selector = $SeleccionarHora/SeleccionDia
+	var hour_selector = $SeleccionarHora/VBoxContainer/Spinbox_Hora
+	var minute_selector = $SeleccionarHora/VBoxContainer/Spinbox_Minutos
+	
+	var selected_day = day_selector.get_selected_id() + 1  # Convert to 1-based index
+	var selected_hour = hour_selector.value
+	var selected_minute = minute_selector.value
+	
 	var python_call = preload("res://Scripts/python_call.gd").new()
-	python_call.run_python_script(id_origen, id_destino)
+	python_call.run_python_script(id_origen, id_destino, selected_day, selected_hour, selected_minute)
 	
 
 func make_arist(list_stations_id: Array) -> Array:
@@ -91,7 +99,7 @@ func _button_combined():
 	_on_button_pressed()
 	on_calcular_ruta_button_pressed()
 	var ruta = GlobalData.path
-	var tiempo = GlobalData.total_time
+	var tiempo = GlobalData.travel_duration
 	var id_path = GlobalData.path_ids
 	var lista_aristas = make_arist(id_path)
 	desocultar(lista_aristas)
