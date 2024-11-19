@@ -2,3 +2,13 @@ res://Scenes/Gui/StartMenuScreen.tscn
 res://Scenes/SeleccionEstaciones.tscn
 res://Scenes/Gui/GeneradorPNG/Test.tscn
 res://Scenes/mapa.tscn
+<<<<<<< Updated upstream
+=======
+res://Scripts/python_call.gd
+res://Scripts/seleccionar_hora.gd
+res://Scripts/Gui/mostrar_estaciones_origen_destino.gd
+res://Scenes/Gui/mapa/mapa.tscn
+res://Scenes/Gui/mapa/estación.tscn
+res://Scenes/Gui/Transition/Transition.tscn
+res://Scripts/GlobalData.gd
+>>>>>>> Stashed changes
