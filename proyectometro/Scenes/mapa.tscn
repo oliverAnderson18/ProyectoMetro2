@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2xxymqlfv070"]
 
-[ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://assets/map.png" id="1_85bvt"]
-[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://mapa/estación.tscn" id="2_ajnup"]
-[ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://assets/routes/lineaA.jpeg" id="3_g5psy"]
-[ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://assets/routes/lineaD.jpeg" id="3_h7gsh"]
-[ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://assets/routes/lineaB.png" id="4_j3why"]
-[ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://assets/routes/lineaC.jpeg" id="5_k5vbb"]
-[ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://assets/routes/lineaE.jpeg" id="7_o0ksd"]
-[ext_resource type="Texture2D" uid="uid://wl5vxq4jtsu" path="res://assets/routes/gris.jpg" id="8_k1wvw"]
-[ext_resource type="Texture2D" uid="uid://c3jhsigjindeo" path="res://assets/routes/transbordo3.png" id="9_jater"]
+[ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://Assets/routes/map.png" id="1_85bvt"]
+[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://Scenes/Gui/mapa/estación.tscn" id="2_ajnup"]
+[ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://Assets/routes/lineaA.jpeg" id="3_g5psy"]
+[ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://Assets/routes/lineaD.jpeg" id="3_h7gsh"]
+[ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://Assets/routes/lineaB.png" id="4_j3why"]
+[ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://Assets/routes/lineaC.jpeg" id="5_k5vbb"]
+[ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="7_o0ksd"]
+[ext_resource type="Texture2D" uid="uid://wl5vxq4jtsu" path="res://Assets/routes/gris.jpg" id="8_k1wvw"]
+[ext_resource type="Texture2D" uid="uid://c3jhsigjindeo" path="res://Assets/routes/transbordo3.png" id="9_jater"]
 
 [node name="Mapa" type="Node2D"]
 
