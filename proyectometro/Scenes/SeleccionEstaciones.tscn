@@ -1,16 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=23 format=3 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
 [ext_resource type="Script" path="res://Scripts/Gui/lista_estaciones.gd" id="2_1nfwg"]
-[ext_resource type="Script" path="res://Scripts/Rutas/nodo_ruta.gd" id="3_62o8g"]
 [ext_resource type="FontFile" uid="uid://b0emhowcce23p" path="res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf" id="3_kavc7"]
 [ext_resource type="Texture2D" uid="uid://cnnw1tgr5p1rl" path="res://Assets/Sprites/Buttons/button_rectangle.png" id="4_y3doi"]
 [ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Assets/Sprites/Buttons/panel_rectangle_screws.png" id="5_dkicf"]
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Assets/Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
 [ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Assets/Sprites/Subte-logo.svg" id="8_bsq8l"]
 [ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://Assets/routes/map.png" id="9_1t8yq"]
-[ext_resource type="FontFile" uid="uid://c7xhnbmlovubs" path="res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Black.ttf" id="9_y13ai"]
 [ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://Scenes/Gui/mapa/estación.tscn" id="10_7uol4"]
 [ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://Assets/routes/lineaA.jpeg" id="11_26jix"]
 [ext_resource type="Texture2D" uid="uid://wl5vxq4jtsu" path="res://Assets/routes/gris.jpg" id="11_d3qc0"]
@@ -22,9 +20,6 @@
 [ext_resource type="Script" path="res://Scripts/seleccionar_hora.gd" id="18_jkmt0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x7t5"]
-texture = ExtResource("5_dkicf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1urt"]
 texture = ExtResource("4_y3doi")
@@ -60,56 +55,41 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.299211, 0.388755, 0.536115, 1)
 
-[node name="NodoRuta" type="Control" parent="."]
-layout_mode = 1
-anchor_right = 0.347
-anchor_bottom = 1.0
-offset_right = 0.255981
-script = ExtResource("3_62o8g")
+[node name="SeleccionarRuta" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 177.0
+offset_right = 346.0
+offset_bottom = 280.0
 
-[node name="SeleccionarRuta" type="VBoxContainer" parent="NodoRuta"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 0.273
-anchor_right = 0.865
-anchor_bottom = 0.432
-offset_top = 0.095993
-offset_right = -3.05176e-05
-offset_bottom = 0.0639954
-
-[node name="Origen" type="VBoxContainer" parent="NodoRuta/SeleccionarRuta"]
+[node name="Origen" type="VBoxContainer" parent="SeleccionarRuta"]
 layout_mode = 2
 script = ExtResource("2_1nfwg")
 
-[node name="LabelEstacionOrigen" type="Label" parent="NodoRuta/SeleccionarRuta/Origen"]
+[node name="LabelEstacionOrigen" type="Label" parent="SeleccionarRuta/Origen"]
 layout_mode = 2
 text = "Seleccione la estación de origen:"
 
-[node name="listaEstaciones" type="OptionButton" parent="NodoRuta/SeleccionarRuta/Origen"]
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Origen"]
 layout_mode = 2
 
-[node name="Destino" type="VBoxContainer" parent="NodoRuta/SeleccionarRuta"]
+[node name="Destino" type="VBoxContainer" parent="SeleccionarRuta"]
 layout_mode = 2
 script = ExtResource("2_1nfwg")
 
-[node name="LabelEstacionDestino" type="Label" parent="NodoRuta/SeleccionarRuta/Destino"]
+[node name="LabelEstacionDestino" type="Label" parent="SeleccionarRuta/Destino"]
 layout_mode = 2
 text = "Seleccione la estación de destino:"
 
-[node name="listaEstaciones" type="OptionButton" parent="NodoRuta/SeleccionarRuta/Destino"]
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Destino"]
 layout_mode = 2
 
-[node name="CalcularRuta" type="Button" parent="NodoRuta"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 0.466
-anchor_right = 0.865
-anchor_bottom = 0.552
-offset_top = 0.0319824
-offset_right = -3.05176e-05
-offset_bottom = 0.303955
+[node name="CalcularRuta" type="Button" parent="."]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 332.0
+offset_right = 346.0
+offset_bottom = 379.0
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
@@ -118,28 +98,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kavc7")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8s5rr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_8x7t5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_m1urt")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l3kuy")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5qosc")
 text = "Calcular ruta"
-
-[node name="AvisoMismasEstaciones" type="Label" parent="NodoRuta"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.157
-anchor_top = 0.557
-anchor_right = 0.865
-anchor_bottom = 0.593
-offset_left = 0.199997
-offset_top = 0.0639648
-offset_right = -3.05176e-05
-offset_bottom = -0.264038
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("9_y13ai")
-text = "Elija un origen y destino distinto"
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -947,6 +909,3 @@ layout_mode = 2
 
 [node name="Spinbox_Minutos" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
 layout_mode = 2
-
-[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
-[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Destino/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
