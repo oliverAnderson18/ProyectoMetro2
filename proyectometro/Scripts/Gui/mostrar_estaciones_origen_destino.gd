@@ -49,16 +49,9 @@ func load_scene() -> void:
 	$"Mapa/conexiones/156",
 	$"Mapa/conexiones/132",
 ]
-@onready var mas_info = $MasInfo
-@onready var pop_up = $DisplayMasInfo
 
 func _ready() -> void:
-<<<<<<< Updated upstream
 	$CalcularRuta.connect("pressed", Callable(self, "_button_combined"))
-=======
-	$NodoRuta/CalcularRuta.connect("pressed", Callable(self, "_button_combined"))
-	$MasInfo.connect("pressed", Callable(self, "_display_mas_info"))
->>>>>>> Stashed changes
 
 func on_calcular_ruta_button_pressed():
 	var origen = $SeleccionarRuta/Origen/listaEstaciones
@@ -102,14 +95,5 @@ func _button_combined():
 	var id_path = GlobalData.path_ids
 	var lista_aristas = make_arist(id_path)
 	desocultar(lista_aristas)
-	_show_mas_info()
 		
-func _show_mas_info():
-	mas_info.visible = true
 	
-func _display_mas_info():
-	pop_up.show()
-
-
-func _on_display_mas_info_close_requested() -> void:
-	pop_up.hide()
