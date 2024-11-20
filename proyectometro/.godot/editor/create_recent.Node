@@ -1,8 +1,7 @@
-Label
 Control
+Label
+Panel
 Container
 SpinBox
 VBoxContainer
-Label
 OptionButton
-Panel
