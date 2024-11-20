@@ -1,3 +1,8 @@
+Node2D
+AnimationPlayer
+PathFollow2D
+Path2D
+Sprite2D
 Control
 Label
 Panel
