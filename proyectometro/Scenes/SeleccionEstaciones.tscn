@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=22 format=3 uid="uid://bk63wmtlleaop"]
+=======
+[gd_scene load_steps=30 format=3 uid="uid://bk63wmtlleaop"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -27,6 +31,17 @@ texture = ExtResource("4_y3doi")
 texture = ExtResource("5_dkicf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qosc"]
+texture = ExtResource("6_55l7p")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77j6n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0yx2n"]
+texture = ExtResource("4_y3doi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1ouc"]
+texture = ExtResource("5_dkicf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_if7n2"]
 texture = ExtResource("6_55l7p")
 
 [node name="Control" type="Control"]
@@ -880,3 +895,84 @@ position = Vector2(836.847, 631.203)
 rotation = 0.311208
 scale = Vector2(0.26194, 1)
 texture = ExtResource("11_26jix")
+<<<<<<< Updated upstream
+=======
+
+[node name="SeleccionarHora" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 439.0
+offset_right = 318.0
+offset_bottom = 611.0
+script = ExtResource("18_jkmt0")
+
+[node name="Label" type="Label" parent="SeleccionarHora"]
+layout_mode = 2
+text = "Seleccione el día:"
+
+[node name="SeleccionDia" type="OptionButton" parent="SeleccionarHora"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="SeleccionarHora"]
+layout_mode = 2
+text = "Seleccione la hora:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SeleccionarHora"]
+layout_mode = 2
+
+[node name="Spinbox_Hora" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spinbox_Minutos" type="SpinBox" parent="SeleccionarHora/VBoxContainer"]
+layout_mode = 2
+
+[node name="MasInfo" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 331.0
+offset_top = 520.0
+offset_right = 389.0
+offset_bottom = 579.0
+theme_override_colors/font_hover_pressed_color = Color(0.270588, 0.270588, 0.270588, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kavc7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_77j6n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0yx2n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t1ouc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_if7n2")
+text = "+"
+
+[node name="DisplayMasInfo" type="Window" parent="."]
+title = "Mas Información acerca del trayecto"
+initial_position = 1
+size = Vector2i(400, 500)
+visible = false
+theme_override_colors/title_color = Color(1, 1, 1, 1)
+theme_override_colors/title_outline_modulate = Color(0.929412, 0, 0, 1)
+theme_override_fonts/title_font = ExtResource("3_kavc7")
+
+[node name="ColorRect" type="ColorRect" parent="DisplayMasInfo"]
+custom_minimum_size = Vector2(400, 500)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.298039, 0.388235, 0.537255, 1)
+
+[node name="Tiempo de salida" type="Label" parent="DisplayMasInfo/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.5
+offset_right = 58.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_kavc7")
+text = "Hora de salida: "
+
+[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
+[connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Destino/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
+[connection signal="close_requested" from="DisplayMasInfo" to="." method="_on_display_mas_info_close_requested"]
+>>>>>>> Stashed changes
