@@ -92,7 +92,6 @@ func desocultar(lista_aristas):
 	for arista in lista_aristas:
 		var nodo = get_node(arista)
 		nodo.visible = true
-		await get_tree().create_timer(1).timeout
 
 
 func _button_combined():
