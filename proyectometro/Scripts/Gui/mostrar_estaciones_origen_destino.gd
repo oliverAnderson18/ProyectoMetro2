@@ -51,7 +51,9 @@ func load_scene() -> void:
 ]
 @onready var mas_button = $MasInfo
 @onready var pop_up = $MostrarMasInfo
-
+@onready var path = $MostrarMasInfo/VBoxContainer/Ruta/ruta
+@onready var time = $MostrarMasInfo/VBoxContainer/Tiempo/tiempo
+@onready var hora = $MostrarMasInfo/VBoxContainer/Hora/hora
 
 func _ready() -> void:
 	$NodoRuta/CalcularRuta.connect("pressed", Callable(self, "_button_combined"))
@@ -107,6 +109,9 @@ func _button_combined():
 	var lista_aristas = make_arist(id_path)
 	desocultar(lista_aristas)
 	_show_button_mas_info()
+	path.text = GlobalData.get_array()
+	time.text = str(GlobalData.travel_duration) + " minutos."
+	hora.text = str(GlobalData.arrival_time)
 
 func _show_button_mas_info():
 	mas_button.visible = true

@@ -1,9 +1,10 @@
+Panel
+VBoxContainer
+Node
+Label
 Window
 Button
 Control
-Label
-Panel
 Container
 SpinBox
-VBoxContainer
 OptionButton
