@@ -11,3 +11,12 @@ func _on_button_pressed() -> void:
 	else:
 		menu.visible = true
 		animationPlayer.play("show_menu")
+
+
+
+
+func _on_main_menu_pressed() -> void:
+	Transition.transition_to("res://Scenes/Gui/StartMenuScreen.tscn")
+
+func _on_exit_pressed() -> void:
+		get_tree().quit()

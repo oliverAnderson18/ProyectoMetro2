@@ -118,7 +118,11 @@ func _show_button_mas_info():
 	mas_button.visible = true
 	
 func _show_pop_up_window():
-	pop_up.visible = true
-
+	if pop_up.visible == false:
+		pop_up.visible = true
+	else:
+		pop_up.hide()
+		
 func _on_mostrar_mas_info_close_requested() -> void:
-	pop_up.hide()
+		pop_up.hide()
+		
