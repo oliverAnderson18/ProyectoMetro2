@@ -5,6 +5,7 @@ signal loaded()
 # Called when the node enters the scene tree for the first time.
 func activate() -> void:
 	pass
+	
 
 func load_scene() -> void:
 	await get_tree().create_timer(0.1).timeout
@@ -66,9 +67,9 @@ func on_calcular_ruta_button_pressed():
 	var id_origen = origen.get_selected_id()
 	var id_destino = destino.get_selected_id()
 	
-	var day_selector = $SeleccionarHora/SeleccionDia
-	var hour_selector = $SeleccionarHora/VBoxContainer/Spinbox_Hora
-	var minute_selector = $SeleccionarHora/VBoxContainer/Spinbox_Minutos
+	var day_selector = $NodoRuta/SeleccionarHora/SeleccionDia
+	var hour_selector = $NodoRuta/SeleccionarHora/HBoxContainer/Spinbox_Hora
+	var minute_selector = $NodoRuta/SeleccionarHora/HBoxContainer/Spinbox_Minutos
 	
 	var selected_day = day_selector.get_selected_id() + 1  # Convert to 1-based index
 	var selected_hour = hour_selector.value

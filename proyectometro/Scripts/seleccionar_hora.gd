@@ -1,8 +1,8 @@
 extends VBoxContainer
 
 @onready var day_selector = $SeleccionDia
-@onready var hour_selector = $VBoxContainer/Spinbox_Hora
-@onready var minute_selector = $VBoxContainer/Spinbox_Minutos
+@onready var hour_selector = $HBoxContainer/Spinbox_Hora
+@onready var minute_selector = $HBoxContainer/Spinbox_Minutos
 
 func _ready() -> void:
 	var days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
