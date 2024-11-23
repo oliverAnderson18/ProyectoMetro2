@@ -120,7 +120,6 @@ func _button_combined():
 	var final_station = GlobalData.grouped_path[-1]["stations"][-1]
 	
 	popup2.populate_route(start_station, GlobalData.grouped_path, final_station, GlobalData.transfers)
-	popup2.show_popup()
 	
 
 func _show_button_mas_info():
@@ -130,5 +129,7 @@ func _show_pop_up_window():
 	popup2.show_popup()
 		
 func _on_mostrar_mas_info_close_requested() -> void:
-		pop_up.hide()
-		
+	pop_up.hide()
+
+func _on_route_popup_close_requested() -> void:
+	popup2.hide() # Replace with function body.

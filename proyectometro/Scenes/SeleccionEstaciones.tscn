@@ -3328,3 +3328,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Main_Menu" to="NodoMenu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Exit" to="NodoMenu" method="_on_exit_pressed"]
 [connection signal="pressed" from="NodoMenu/Button" to="NodoMenu" method="_on_button_pressed"]
+[connection signal="close_requested" from="RoutePopup" to="." method="_on_route_popup_close_requested"]
