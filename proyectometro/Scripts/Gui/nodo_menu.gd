@@ -5,7 +5,7 @@ extends Control
 
 func _on_button_pressed() -> void:
 	if menu.visible == true:
-		animationPlayer.play("hide_menu")
+		animationPlayer.play_backwards("show_menu")
 		await animationPlayer.animation_finished
 		menu.visible = false
 	else:
