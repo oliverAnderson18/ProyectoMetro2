@@ -1,13 +1,21 @@
 extends Window
 
-@onready var content_container = $VScrollBar/VBoxContainer	# Reference to the main container
+@onready var content_container = $ScrollContainer/VBoxContainer
 
-func populate_route(start_station, grouped_path, final_station, transfers):
+func populate_popup(start_station, grouped_path, final_station, transfers):
 	# Reset the popup
 	for n in content_container.get_children():
 		content_container.remove_child(n)
 		n.queue_free()		
 		
+	# Add time
+	var time_label = Label.new()
+	time_label.text = str(GlobalData.selected_hour) + ":" + str(GlobalData.selected_minute) + " - " + str(GlobalData.arrival_time)
+	content_container.add_child(time_label)
+	
+	var duration_label = Label.new()
+	duration_label.text = "(" + str(GlobalData.travel_duration) + " min)"
+	content_container.add_child(duration_label)
 	# Add the start station
 	var start_label = Label.new()
 	start_label.text = "Estación de Inicio: " + start_station
@@ -35,9 +43,10 @@ func populate_route(start_station, grouped_path, final_station, transfers):
 		line_label.text = segment["line"]
 		line_details.add_child(line_label)
 	
-		# Toggle button
+		# Toggle button creation
 		var toggle_button = Button.new()
 		toggle_button.text = "Mostrar Estaciones"
+		
 		line_details.add_child(toggle_button)
 		
 		# Hidden container for station names
@@ -50,7 +59,7 @@ func populate_route(start_station, grouped_path, final_station, transfers):
 		
 		line_details.add_child(station_container)
 		
-		toggle_button.connect("pressed", Callable(self, "_on_toggle_stations_pressed").bind(station_container))
+		toggle_button.connect("pressed", Callable(self, "_on_toggle_stations_pressed").bind(station_container, color_rect))
 		
 		if i < transfers.size():
 			var transfer_label = Label.new()
@@ -62,9 +71,20 @@ func populate_route(start_station, grouped_path, final_station, transfers):
 	content_container.add_child(final_label)
 	
 	
-func _on_toggle_stations_pressed(station_container):
-	station_container.visible = !station_container.visible
+func _on_toggle_stations_pressed(station_container: VBoxContainer, color_rect: ColorRect):	
+	var base_height = 30 # Min height
+	var target_height = base_height
 	
+	if station_container.visible:
+		station_container.visible = false
+	else:
+		station_container.visible = true
+		target_height += station_container.get_combined_minimum_size().y
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(color_rect, "custom_minimum_size", Vector2(10, target_height), 0.3)
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_IN_OUT)
 
 func show_popup():
 	self.popup_centered()

@@ -77,6 +77,9 @@ func on_calcular_ruta_button_pressed():
 	var selected_hour = hour_selector.value
 	var selected_minute = minute_selector.value
 	
+	GlobalData.selected_hour = str(selected_hour)
+	GlobalData.selected_minute = str(selected_minute)
+	
 	var python_call = preload("res://Scripts/python_call.gd").new()
 	python_call.run_python_script(id_origen, id_destino, selected_day, selected_hour, selected_minute)
 	
@@ -119,7 +122,7 @@ func _button_combined():
 	var start_station = GlobalData.grouped_path[0]["stations"][0]
 	var final_station = GlobalData.grouped_path[-1]["stations"][-1]
 	
-	popup2.populate_route(start_station, GlobalData.grouped_path, final_station, GlobalData.transfers)
+	popup2.populate_popup(start_station, GlobalData.grouped_path, final_station, GlobalData.transfers)
 	
 
 func _show_button_mas_info():

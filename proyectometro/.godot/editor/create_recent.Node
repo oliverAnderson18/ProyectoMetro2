@@ -1,8 +1,9 @@
+ScrollContainer
+VBoxContainer
+Control
 Sprite2D
 Node2D
-Control
 VScrollBar
-VBoxContainer
 Label
 Window
 Popup
@@ -11,6 +12,3 @@ AnimationPlayer
 Button
 HBoxContainer
 Panel
-Node
-Container
-SpinBox
