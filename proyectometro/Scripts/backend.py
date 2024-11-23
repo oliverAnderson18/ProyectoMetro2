@@ -185,7 +185,7 @@ def main():
 		"travel_duration": travel_duration_minutes,
 		"arrival_time": arrival_time.strftime("%H:%M"),
 		"grouped_path": grouped_path,
-		"transbordos": transfers
+		"transfers": transfers
 	}
 	print(json.dumps(output))
 
