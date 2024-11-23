@@ -4,12 +4,17 @@ extends Control
 @onready var estacion_destino = $SeleccionarRuta/Destino/listaEstaciones
 @onready var boton_calcular = $CalcularRuta
 @onready var aviso = $AvisoMismasEstaciones
+@onready var nodo_seleccion = get_node("../NodoSeleccion")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _ready() -> void:
 	check(estacion_origen, estacion_destino)
+	nodo_seleccion.elegir_estacion_mapa.connect(_on_elegir_estacion_mapa)
 
 func _on_lista_estaciones_item_selected(index: int) -> void:
+	check(estacion_origen, estacion_destino)
+
+func _on_elegir_estacion_mapa() -> void:
 	check(estacion_origen, estacion_destino)
 
 func check(origen: OptionButton, destino: OptionButton) -> void:
