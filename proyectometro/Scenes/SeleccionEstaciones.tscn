@@ -3555,14 +3555,16 @@ size = Vector2i(400, 560)
 visible = false
 script = ExtResource("31_384k5")
 
-[node name="VScrollBar" type="VScrollBar" parent="RoutePopup"]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="ScrollContainer" type="ScrollContainer" parent="RoutePopup"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -400.0
+offset_bottom = 560.0
+grow_horizontal = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="RoutePopup/VScrollBar"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VBoxContainer" type="VBoxContainer" parent="RoutePopup/ScrollContainer"]
+layout_mode = 2
 
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoSeleccion" method="_on_lista_estaciones_origen_item_selected"]
