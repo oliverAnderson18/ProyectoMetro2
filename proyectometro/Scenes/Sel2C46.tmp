@@ -3245,7 +3245,6 @@ libraries = {
 }
 
 [node name="NodoSeleccion" type="Control" parent="."]
-z_index = 8
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3257,18 +3256,17 @@ script = ExtResource("31_0n1sa")
 
 [node name="FlechaOrigen" type="Node2D" parent="NodoSeleccion"]
 z_index = 8
-position = Vector2(797, 762)
+position = Vector2(62, 38)
 
 [node name="Sprite2D" type="Sprite2D" parent="NodoSeleccion/FlechaOrigen"]
-position = Vector2(0, -15)
+position = Vector2(-43, 647)
 texture = ExtResource("32_kr5fr")
 
 [node name="FlechaDestino" type="Node2D" parent="NodoSeleccion"]
 z_index = 8
-position = Vector2(308, 707)
 
 [node name="Sprite2D" type="Sprite2D" parent="NodoSeleccion/FlechaDestino"]
-position = Vector2(0, -14)
+position = Vector2(54, 687)
 texture = ExtResource("33_ef0pc")
 
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]

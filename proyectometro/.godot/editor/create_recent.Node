@@ -1,6 +1,8 @@
+Sprite2D
+Node2D
+Control
 ColorRect
 AnimationPlayer
-Control
 Button
 HBoxContainer
 Panel
@@ -10,4 +12,3 @@ Label
 Window
 Container
 SpinBox
-OptionButton
