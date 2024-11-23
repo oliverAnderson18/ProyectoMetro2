@@ -4,14 +4,12 @@ func get_python_path() -> String:
 	var command = "where" if OS.get_name() == "Windows" else "which"
 	var result = []
 	var res = OS.execute(command, ["python"], result, true)
-	print("result", result)
 	
 	var regex = RegEx.new()
 	regex.compile("\\S+")
 	var results = Array()
 	for element in regex.search_all(result[0]):
 		results.append(element.get_string())
-	print(results)
 	
 	if res == 0 and result.size() > 0:
 		return result[0].strip_edges()
@@ -22,7 +20,6 @@ func get_python_path() -> String:
 	
 func run_python_script(source_id, target_id, day, hour, minute):
 	var python_path = get_python_path()
-	print("path", python_path)
 	if python_path == "":
 		return
 		
@@ -41,6 +38,10 @@ func run_python_script(source_id, target_id, day, hour, minute):
 		print(GlobalData.path_ids)
 		GlobalData.arrival_time = parsedOutput["arrival_time"]
 		print(GlobalData.arrival_time)
+		GlobalData.grouped_path = parsedOutput["grouped_path"]
+		print(GlobalData.grouped_path)
+		GlobalData.transfers = parsedOutput["transfers"]
+		print(GlobalData.transfers)
 		
 	else:
 		print("Error running Python script:", result)
