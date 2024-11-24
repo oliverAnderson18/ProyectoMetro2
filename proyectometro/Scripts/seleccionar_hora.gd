@@ -14,6 +14,7 @@ func _ready() -> void:
 	hour_selector.connect("value_changed", Callable(self, "_on_hour_changed"))
 
 	_set_defaults()
+
 	
 
 func _set_defaults():
@@ -22,6 +23,7 @@ func _set_defaults():
 	var current_day = 7 if godot_weekday == 0 else godot_weekday	# 1 = Monday, 7 = Sunday
 	var current_hour = date_time["hour"]
 	var current_minute = date_time["minute"]
+
 	
 	day_selector.select(current_day - 1)
 	_update_hour_limits(current_day)

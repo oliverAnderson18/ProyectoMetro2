@@ -11,21 +11,36 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 	for n in content_container.get_children():
 		content_container.remove_child(n)
 		n.queue_free()		
+		
+	# Load custom fonts
+	var f_med = load("res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf")
+	var f_bold = load("res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf")
 
 	self.title = "Ruta: " + str(start_station) + " - " + str(final_station)
 	
 	# Add time
+	content_container.add_child(create_panel(12)) 
 	var time_label = Label.new()
-	time_label.text = str(GlobalData.selected_hour) + ":" + str(GlobalData.selected_minute) + " - " + str(GlobalData.arrival_time)
+	time_label.text = str(GlobalData.selected_hour) + ":" + str(GlobalData.selected_minute).pad_zeros(2) + " - " + str(GlobalData.arrival_time)
+	time_label.add_theme_font_override("font", f_bold)
+	time_label.add_theme_font_size_override("font_size", 20)
 	content_container.add_child(time_label)
 	
+	content_container.add_child(create_panel(2)) 
 	var duration_label = Label.new()
 	duration_label.text = "(" + str(GlobalData.travel_duration) + " min)"
+	duration_label.add_theme_font_override("font", f_med)
+	duration_label.add_theme_font_size_override("font_size", 15)
 	content_container.add_child(duration_label)
-	# Add the start station
+	content_container.add_child(create_panel(2)) 
+	
+	# Add the start station 
 	var start_label = Label.new()
 	start_label.text = "Estación de Inicio: " + start_station
+	start_label.add_theme_font_override("font", f_bold)
+	start_label.add_theme_font_size_override("font_size", 18)
 	content_container.add_child(start_label)
+	content_container.add_child(create_panel(10))
 	
 	for i in range(grouped_path.size()):
 		var segment = grouped_path[i]
@@ -46,13 +61,14 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 		
 		# Add line name
 		var line_label = Label.new()
-		line_label.text = segment["line"]
+		line_label.text = "Línea " + segment["line"]
+		line_label.add_theme_font_override("font", f_med)
+		line_label.add_theme_font_size_override("font_size", 15)
 		line_details.add_child(line_label)
 	
 		# Toggle button creation
 		var toggle_button = Button.new()
 		toggle_button.text = "Mostrar Estaciones"
-		
 		line_details.add_child(toggle_button)
 		
 		# Hidden container for station names
@@ -61,6 +77,8 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 		for station in segment["stations"]:
 			var station_label = Label.new()
 			station_label.text = station
+			station_label.add_theme_font_override("font", f_med)
+			station_label.add_theme_font_size_override("font_size", 14)
 			station_container.add_child(station_label)
 		
 		line_details.add_child(station_container)
@@ -70,11 +88,28 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 		if i < transfers.size():
 			var transfer_label = Label.new()
 			transfer_label.text = "Transbordo en: " + transfers[i]
+			transfer_label.add_theme_font_override("font", f_bold)
+			transfer_label.add_theme_font_size_override("font_size", 18)
+			
+			content_container.add_child(create_panel(12)) 
 			content_container.add_child(transfer_label)
+			content_container.add_child(create_panel(12)) 
 	
+	# Add final station
 	var final_label = Label.new()
 	final_label.text = "Estación Final: " + final_station
+	final_label.add_theme_font_override("font", f_bold)
+	final_label.add_theme_font_size_override("font_size", 18)
+	content_container.add_child(create_panel(10)) 
 	content_container.add_child(final_label)
+	
+	
+func create_panel(height) -> Panel:
+	var panel = Panel.new()
+	var style_box = StyleBoxEmpty.new()
+	panel.add_theme_stylebox_override("panel", style_box)
+	panel.custom_minimum_size = Vector2(200, height)
+	return panel
 	
 	
 func _on_toggle_stations_pressed(station_container: VBoxContainer, color_rect: ColorRect):	
