@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=81 format=4 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://dq5acfrd83867" path="res://Assets/Sprites/FlechaDestino.png" id="33_ef0pc"]
 [ext_resource type="Texture2D" uid="uid://ipwvnotgeoas" path="res://Assets/Icons/FlechaOrigen_pequena.png" id="35_vovic"]
 [ext_resource type="Texture2D" uid="uid://c85wejm3puxf2" path="res://Assets/Icons/FlechaDestino_pequeno.png" id="36_1aobl"]
+[ext_resource type="AudioStream" uid="uid://smirk2xtuhl5" path="res://falling-down-fade.mp3" id="39_liqgd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00ssj"]
 
@@ -3614,6 +3615,12 @@ grow_horizontal = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="RoutePopup/ScrollContainer"]
 layout_mode = 2
+
+[node name="musica_fondo_mapa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_liqgd")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoRuta" method="_on_lista_estaciones_item_selected"]
 [connection signal="item_selected" from="NodoRuta/SeleccionarRuta/Origen/listaEstaciones" to="NodoSeleccion" method="_on_lista_estaciones_origen_item_selected"]

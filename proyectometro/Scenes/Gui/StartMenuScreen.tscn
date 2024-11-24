@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://boxxmumjmhxmd"]
+[gd_scene load_steps=28 format=4 uid="uid://boxxmumjmhxmd"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/start_menu.gd" id="1_5erdi"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="2_exbkt"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Assets/Sprites/Buttons/button_rectangle_depth.png" id="5_dx0h8"]
 [ext_resource type="Texture2D" uid="uid://c02t5efr43iac" path="res://Assets/Sprites/GUI/startmenu.png" id="5_fys2w"]
 [ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Assets/Sprites/Buttons/panel_rectangle_screws.png" id="5_nwu68"]
+[ext_resource type="AudioStream" uid="uid://bjietw6hnsp1b" path="res://cup-of-coffee-fade.mp3" id="12_vmuoy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6o82"]
 texture = ExtResource("3_p6m5e")
@@ -1289,6 +1290,12 @@ root_node = NodePath("../Menu")
 libraries = {
 "": SubResource("AnimationLibrary_s0xsb")
 }
+
+[node name="musica_fondo_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_vmuoy")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Menu/MenuButton/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/MenuButton/Exit" to="." method="_on_exit_pressed"]

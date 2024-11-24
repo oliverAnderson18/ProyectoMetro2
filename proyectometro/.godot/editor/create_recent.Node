@@ -1,3 +1,4 @@
+AudioStreamPlayer
 HBoxContainer
 Panel
 Label
@@ -11,5 +12,3 @@ VScrollBar
 Label
 Window
 Popup
-ColorRect
-AnimationPlayer
