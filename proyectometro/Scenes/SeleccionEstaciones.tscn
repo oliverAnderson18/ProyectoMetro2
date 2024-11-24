@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=68 format=4 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b0emhowcce23p" path="res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf" id="3_kavc7"]
 [ext_resource type="Texture2D" uid="uid://cnnw1tgr5p1rl" path="res://Assets/Sprites/Buttons/button_rectangle.png" id="4_y3doi"]
 [ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Assets/Sprites/Buttons/panel_rectangle_screws.png" id="5_dkicf"]
+[ext_resource type="FontFile" uid="uid://blaeh4sddcps" path="res://Assets/Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf" id="5_x7wbm"]
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Assets/Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
 [ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Assets/Sprites/Subte-logo.svg" id="8_bsq8l"]
 [ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://Assets/routes/map.png" id="9_1t8yq"]
@@ -22,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="15_7scxj"]
 [ext_resource type="Script" path="res://Scripts/seleccionar_hora.gd" id="18_jkmt0"]
 [ext_resource type="Texture2D" uid="uid://fkqu8ir0tk5o" path="res://Assets/Sprites/Buttons/button_square.png" id="22_lmm84"]
-[ext_resource type="Script" path="res://Scripts/Gui/mostrar_mas_info.gd" id="22_s2c4m"]
 [ext_resource type="Texture2D" uid="uid://ce3e6eplmqcot" path="res://Assets/Sprites/Buttons/panel_square_screws.png" id="23_b86us"]
 [ext_resource type="Texture2D" uid="uid://ub0r8lgwtmc5" path="res://Assets/Sprites/Buttons/button_square_depth.png" id="24_hp72c"]
 [ext_resource type="Texture2D" uid="uid://cx3ma8wma5p05" path="res://Assets/TileSet/MenuGris.png" id="26_awa46"]
@@ -34,6 +34,10 @@
 [ext_resource type="Script" path="res://Scripts/Gui/RoutePopup.gd" id="31_384k5"]
 [ext_resource type="Texture2D" uid="uid://0k6bj08jr7kw" path="res://Assets/Sprites/FlechaOrigen.png" id="32_kr5fr"]
 [ext_resource type="Texture2D" uid="uid://dq5acfrd83867" path="res://Assets/Sprites/FlechaDestino.png" id="33_ef0pc"]
+[ext_resource type="Texture2D" uid="uid://ipwvnotgeoas" path="res://Assets/Icons/FlechaOrigen_pequena.png" id="35_vovic"]
+[ext_resource type="Texture2D" uid="uid://c85wejm3puxf2" path="res://Assets/Icons/FlechaDestino_pequeno.png" id="36_1aobl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00ssj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
 
@@ -49,9 +53,6 @@ texture = ExtResource("5_dkicf")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qosc"]
 texture = ExtResource("6_55l7p")
 
-[sub_resource type="LabelSettings" id="LabelSettings_qd6w7"]
-font_size = 40
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljy5w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5l6dc"]
@@ -62,6 +63,9 @@ texture = ExtResource("23_b86us")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjl31"]
 texture = ExtResource("24_hp72c")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qd6w7"]
+font_size = 40
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m1trg"]
 shader = ExtResource("27_ojuxd")
@@ -1242,6 +1246,15 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyue3"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j6ev"]
+texture = ExtResource("23_b86us")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74wpe"]
+texture = ExtResource("22_lmm84")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7pdx"]
+texture = ExtResource("22_lmm84")
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -1293,10 +1306,16 @@ script = ExtResource("2_1nfwg")
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_x7wbm")
 text = "Seleccione la estación de origen:"
 
 [node name="listaEstaciones" type="OptionButton" parent="NodoRuta/SeleccionarRuta/Origen"]
 layout_mode = 2
+
+[node name="Panel" type="Panel" parent="NodoRuta/SeleccionarRuta"]
+custom_minimum_size = Vector2(0, 6.49)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_00ssj")
 
 [node name="Destino" type="VBoxContainer" parent="NodoRuta/SeleccionarRuta"]
 layout_mode = 2
@@ -1306,6 +1325,7 @@ script = ExtResource("2_1nfwg")
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_x7wbm")
 text = "Seleccione la estación de destino:"
 
 [node name="listaEstaciones" type="OptionButton" parent="NodoRuta/SeleccionarRuta/Destino"]
@@ -1318,9 +1338,10 @@ anchor_left = 0.15
 anchor_top = 0.665
 anchor_right = 0.865
 anchor_bottom = 0.752
-offset_top = 0.0799866
-offset_right = -6.10352e-05
-offset_bottom = -0.296051
+offset_top = 11.08
+offset_right = -1.285
+offset_bottom = 14.704
+scale = Vector2(0.78956, 0.833269)
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
@@ -1343,12 +1364,13 @@ anchor_top = 0.755
 anchor_right = 0.867
 anchor_bottom = 0.79
 offset_left = 0.199993
-offset_top = -0.240082
+offset_top = 6.75992
 offset_right = 0.199982
-offset_bottom = 0.0799255
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+offset_bottom = 7.07993
+theme_override_colors/font_color = Color(0.933333, 0.152941, 0.278431, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("9_y13ai")
+theme_override_font_sizes/font_size = 13
 text = "Elija un origen y destino distinto"
 
 [node name="SeleccionarHora" type="VBoxContainer" parent="NodoRuta"]
@@ -1358,16 +1380,17 @@ anchor_left = 0.152
 anchor_top = 0.463
 anchor_right = 0.58
 anchor_bottom = 0.65
-offset_left = 1.2
-offset_top = -0.0240173
-offset_right = -1.52588e-05
-offset_bottom = -0.200012
+offset_left = -0.799999
+offset_top = 11.976
+offset_right = -2.0
+offset_bottom = 11.8
 script = ExtResource("18_jkmt0")
 
 [node name="Label" type="Label" parent="NodoRuta/SeleccionarHora"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_x7wbm")
 text = "Seleccione el día:"
 
 [node name="SeleccionDia" type="OptionButton" parent="NodoRuta/SeleccionarHora"]
@@ -1377,6 +1400,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_x7wbm")
 text = "Seleccione la hora:"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NodoRuta/SeleccionarHora"]
@@ -1387,6 +1411,29 @@ layout_mode = 2
 
 [node name="Spinbox_Minutos" type="SpinBox" parent="NodoRuta/SeleccionarHora/HBoxContainer"]
 layout_mode = 2
+
+[node name="MasInfo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27
+anchor_top = 0.687
+anchor_right = 0.307
+anchor_bottom = 0.756
+offset_left = -4.03998
+offset_top = -3.17603
+offset_right = 25.336
+offset_bottom = 24.112
+scale = Vector2(0.684, 0.7)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ljy5w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5l6dc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3eb6u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sjl31")
+text = "+"
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -1513,6 +1560,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "17"
@@ -1546,6 +1594,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "16"
@@ -1579,6 +1628,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "15"
@@ -1612,6 +1662,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "14"
@@ -1645,6 +1696,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control6"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "13"
@@ -1678,6 +1730,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control7"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "12"
@@ -1711,6 +1764,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaA/estaciones/Control8"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "11"
@@ -1771,6 +1825,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "21"
@@ -1803,6 +1858,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "22"
@@ -1836,6 +1892,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "23"
@@ -1869,6 +1926,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "24"
@@ -1902,6 +1960,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "25"
@@ -1935,6 +1994,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaB/estaciones/Control6"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "26"
@@ -2007,6 +2067,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "32"
@@ -2039,6 +2100,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "31"
@@ -2071,6 +2133,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "34"
@@ -2103,6 +2166,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "35"
@@ -2136,6 +2200,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control6"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "36"
@@ -2168,6 +2233,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control7"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "37"
@@ -2200,6 +2266,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control8"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "38"
@@ -2232,6 +2299,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control9"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "39"
@@ -2264,6 +2332,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaC/estaciones/Control"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "33"
@@ -2320,6 +2389,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaD/estaciones/Control2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "44"
@@ -2352,6 +2422,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaD/estaciones/Control3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "43"
@@ -2384,6 +2455,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaD/estaciones/Control4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "42"
@@ -2416,6 +2488,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaD/estaciones/Control5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "41"
@@ -2448,6 +2521,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaD/estaciones/Control"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "45"
@@ -2508,6 +2582,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "52"
@@ -2540,6 +2615,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "53"
@@ -2572,6 +2648,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "54"
@@ -2604,6 +2681,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "55"
@@ -2636,6 +2714,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control6"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "56"
@@ -2668,6 +2747,7 @@ label_settings = SubResource("LabelSettings_qd6w7")
 
 [node name="ID" type="Label" parent="Mapa/lineaE/estaciones/Control"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "51"
@@ -3269,106 +3349,8 @@ rotation = 0.311208
 scale = Vector2(0.26194, 1)
 texture = ExtResource("11_26jix")
 
-[node name="MasInfo" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.246
-anchor_top = 0.523
-anchor_right = 0.298
-anchor_bottom = 0.616
-offset_left = -0.391998
-offset_top = 0.0960083
-offset_right = -0.296021
-offset_bottom = -0.16803
-mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ljy5w")
-theme_override_styles/hover = SubResource("StyleBoxTexture_5l6dc")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_3eb6u")
-theme_override_styles/normal = SubResource("StyleBoxTexture_sjl31")
-text = "+"
-
-[node name="MostrarMasInfo" type="Window" parent="."]
-title = "Mas información acerca del trayecto."
-initial_position = 1
-size = Vector2i(400, 500)
-visible = false
-script = ExtResource("22_s2c4m")
-
-[node name="ColorRect" type="ColorRect" parent="MostrarMasInfo"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.299211, 0.388755, 0.536115, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MostrarMasInfo"]
-offset_left = 15.0
-offset_top = 10.0
-offset_right = 325.0
-offset_bottom = 216.0
-
-[node name="Ruta" type="VBoxContainer" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MostrarMasInfo/VBoxContainer/Ruta"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 25
-text = "Ruta a seguir:"
-
-[node name="ruta" type="Label" parent="MostrarMasInfo/VBoxContainer/Ruta"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "
-"
-autowrap_mode = 3
-
-[node name="Panel" type="Panel" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
-[node name="Tiempo" type="VBoxContainer" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MostrarMasInfo/VBoxContainer/Tiempo"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 25
-text = "Tiempo estimado de ruta:"
-
-[node name="tiempo" type="Label" parent="MostrarMasInfo/VBoxContainer/Tiempo"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-
-[node name="Panel2" type="Panel" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
-[node name="Hora" type="VBoxContainer" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MostrarMasInfo/VBoxContainer/Hora"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 25
-text = "Hora de llegada:
-"
-
-[node name="hora" type="Label" parent="MostrarMasInfo/VBoxContainer/Hora"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-
-[node name="Panel3" type="Panel" parent="MostrarMasInfo/VBoxContainer"]
-layout_mode = 2
-
 [node name="NodoMenu" type="Control" parent="."]
-z_index = 9
+z_index = 20
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3492,6 +3474,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -3516,14 +3500,14 @@ texture = ExtResource("33_ef0pc")
 [node name="Panel" type="Panel" parent="NodoSeleccion"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.214
-anchor_top = 0.836
-anchor_right = 0.255
-anchor_bottom = 0.994
-offset_left = 166.472
-offset_top = -20.728
-offset_right = 167.24
-offset_bottom = -21.112
+anchor_left = 0.365
+anchor_top = 0.793
+anchor_right = 0.406
+anchor_bottom = 0.951
+offset_left = -0.480011
+offset_top = 0.135986
+offset_right = 0.287964
+offset_bottom = -0.248047
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yyue3")
 
 [node name="BotonOrigen" type="Button" parent="NodoSeleccion/Panel"]
@@ -3537,6 +3521,14 @@ offset_left = -0.0160003
 offset_top = -0.0400002
 offset_right = 0.00799942
 offset_bottom = -0.0220032
+scale = Vector2(1.00143, 0.998073)
+theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_8j6ev")
+theme_override_styles/normal = SubResource("StyleBoxTexture_74wpe")
+icon = ExtResource("35_vovic")
+icon_alignment = 1
 
 [node name="BotonDestino" type="Button" parent="NodoSeleccion/Panel"]
 layout_mode = 1
@@ -3548,6 +3540,9 @@ offset_left = 2.0
 offset_top = 0.0019989
 offset_right = 0.00799942
 offset_bottom = 0.0199966
+theme_override_styles/normal = SubResource("StyleBoxTexture_v7pdx")
+icon = ExtResource("36_1aobl")
+icon_alignment = 1
 
 [node name="RoutePopup" type="Window" parent="."]
 position = Vector2i(655, 56)
@@ -3638,7 +3633,6 @@ layout_mode = 2
 [connection signal="mouse_exited" from="Mapa/lineaE/estaciones/Control6" to="Mapa/lineaE/estaciones/Control6" method="_on_control_51_mouse_exited"]
 [connection signal="mouse_entered" from="Mapa/lineaE/estaciones/Control" to="Mapa/lineaE/estaciones/Control" method="_on_control_51_mouse_entered"]
 [connection signal="mouse_exited" from="Mapa/lineaE/estaciones/Control" to="Mapa/lineaE/estaciones/Control" method="_on_control_51_mouse_exited"]
-[connection signal="close_requested" from="MostrarMasInfo" to="." method="_on_mostrar_mas_info_close_requested"]
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Main_Menu" to="NodoMenu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Exit" to="NodoMenu" method="_on_exit_pressed"]
 [connection signal="pressed" from="NodoMenu/Button" to="NodoMenu" method="_on_button_pressed"]

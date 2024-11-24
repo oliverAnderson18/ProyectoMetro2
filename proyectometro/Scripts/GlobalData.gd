@@ -19,11 +19,3 @@ func clear():
 	selected_hour = 0
 	selected_minute = 0
 	
-func get_array() -> String:
-	var s = ""
-	for i in range(len(path)):
-		if i == len(path)-1:
-			s += String(path[i]) + "."
-		else:
-			s += String(path[i]) + ", "
-	return s

@@ -18,7 +18,8 @@ func _ready() -> void:
 
 func _set_defaults():
 	var date_time = Time.get_datetime_dict_from_system()
-	var current_day = date_time["weekday"] 	# 1 = Lunes, 7 = Domingo
+	var godot_weekday = date_time["weekday"]  	# 0 = Sunday, 1 = Monday, 6 = Saturday
+	var current_day = 7 if godot_weekday == 0 else godot_weekday	# 1 = Monday, 7 = Sunday
 	var current_hour = date_time["hour"]
 	var current_minute = date_time["minute"]
 	

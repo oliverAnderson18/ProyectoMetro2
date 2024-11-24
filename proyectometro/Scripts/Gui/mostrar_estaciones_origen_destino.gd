@@ -11,7 +11,6 @@ func load_scene() -> void:
 	await get_tree().create_timer(0.1).timeout
 	loaded.emit()
 
-@onready var button = $Button
 @onready var target_nodes = [
 	$"Mapa/conexiones/2652",
 	$"Mapa/conexiones/2756",
@@ -51,16 +50,12 @@ func load_scene() -> void:
 	$"Mapa/conexiones/132",
 ]
 @onready var mas_button = $MasInfo
-@onready var pop_up = $MostrarMasInfo
-@onready var path = $MostrarMasInfo/VBoxContainer/Ruta/ruta
-@onready var time = $MostrarMasInfo/VBoxContainer/Tiempo/tiempo
-@onready var hora = $MostrarMasInfo/VBoxContainer/Hora/hora
-
 @onready var popup2 = $RoutePopup
 
 func _ready() -> void:
 	$NodoRuta/CalcularRuta.connect("pressed", Callable(self, "_button_combined"))
-	mas_button.connect("pressed", Callable(self, "_show_pop_up_window"))
+	mas_button.connect("pressed", Callable(self, "_toggle_pop_up_window"))
+	mas_button.visible = false
 
 func on_calcular_ruta_button_pressed():
 	var origen = $NodoRuta/SeleccionarRuta/Origen/listaEstaciones
@@ -109,30 +104,27 @@ func desocultar(lista_aristas):
 func _button_combined():
 	_on_button_pressed()
 	on_calcular_ruta_button_pressed()
-	var ruta = GlobalData.path
-	var tiempo = GlobalData.travel_duration
+	
+	# Process route details
 	var id_path = GlobalData.path_ids
 	var lista_aristas = make_arist(id_path)
 	desocultar(lista_aristas)
+	
 	_show_button_mas_info()
-	path.text = GlobalData.get_array()
-	time.text = str(GlobalData.travel_duration) + " minutos."
-	hora.text = str(GlobalData.arrival_time)
 	
 	var start_station = GlobalData.grouped_path[0]["stations"][0]
 	var final_station = GlobalData.grouped_path[-1]["stations"][-1]
-	
 	popup2.populate_popup(start_station, GlobalData.grouped_path, final_station, GlobalData.transfers)
 	
 
 func _show_button_mas_info():
 	mas_button.visible = true
 	
-func _show_pop_up_window():
-	popup2.show_popup()
-		
-func _on_mostrar_mas_info_close_requested() -> void:
-	pop_up.hide()
+func _toggle_pop_up_window():
+	if popup2.visible:
+		popup2.hide()
+	else:
+		popup2.show_popup()
 
 func _on_route_popup_close_requested() -> void:
-	popup2.hide() # Replace with function body.
+	popup2.hide()
