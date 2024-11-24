@@ -14,19 +14,6 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 
 	self.title = "Ruta: " + str(start_station) + " - " + str(final_station)
 	
-	var panel = PanelContainer.new()
-	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	
-	# Add padding
-	var margin = MarginContainer.new()
-	margin.add_theme_constant_override("margin_top", 5)
-	margin.add_theme_constant_override("margin_bottom", 10)
-	margin.add_theme_constant_override("margin_left", 60)
-	margin.add_theme_constant_override("margin_right", 15)
-	
-	
-	
 	# Add time
 	var time_label = Label.new()
 	time_label.text = str(GlobalData.selected_hour) + ":" + str(GlobalData.selected_minute) + " - " + str(GlobalData.arrival_time)
@@ -89,8 +76,6 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 	final_label.text = "Estación Final: " + final_station
 	content_container.add_child(final_label)
 	
-	content_container.add_child(panel)
-	content_container.add_child(margin)
 	
 func _on_toggle_stations_pressed(station_container: VBoxContainer, color_rect: ColorRect):	
 	var base_height = 30 # Min height

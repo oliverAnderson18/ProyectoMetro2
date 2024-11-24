@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=77 format=4 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://Assets/routes/lineaC.jpeg" id="13_uiy4y"]
 [ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://Assets/routes/lineaD.jpeg" id="14_r8cj4"]
 [ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://Assets/routes/lineaE.jpeg" id="15_7scxj"]
+[ext_resource type="Texture2D" uid="uid://bc2n45gcyofqe" path="res://Assets/Icons/info.png" id="15_pece4"]
 [ext_resource type="Script" path="res://Scripts/seleccionar_hora.gd" id="18_jkmt0"]
 [ext_resource type="Texture2D" uid="uid://fkqu8ir0tk5o" path="res://Assets/Sprites/Buttons/button_square.png" id="22_lmm84"]
 [ext_resource type="Texture2D" uid="uid://ce3e6eplmqcot" path="res://Assets/Sprites/Buttons/panel_square_screws.png" id="23_b86us"]
@@ -32,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://c02t5efr43iac" path="res://Assets/Sprites/GUI/startmenu.png" id="28_ity0s"]
 [ext_resource type="Script" path="res://Scripts/Gui/nodo_seleccion.gd" id="31_0n1sa"]
 [ext_resource type="Script" path="res://Scripts/Gui/RoutePopup.gd" id="31_384k5"]
+[ext_resource type="Texture2D" uid="uid://byd0pg512wvjx" path="res://Assets/Icons/menu.png" id="32_8a1ri"]
 [ext_resource type="Texture2D" uid="uid://0k6bj08jr7kw" path="res://Assets/Sprites/FlechaOrigen.png" id="32_kr5fr"]
 [ext_resource type="Texture2D" uid="uid://dq5acfrd83867" path="res://Assets/Sprites/FlechaDestino.png" id="33_ef0pc"]
 [ext_resource type="Texture2D" uid="uid://ipwvnotgeoas" path="res://Assets/Icons/FlechaOrigen_pequena.png" id="35_vovic"]
@@ -56,13 +58,16 @@ texture = ExtResource("6_55l7p")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljy5w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5l6dc"]
+content_margin_bottom = 4.0
 texture = ExtResource("22_lmm84")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3eb6u"]
 texture = ExtResource("23_b86us")
+texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjl31"]
 texture = ExtResource("24_hp72c")
+texture_margin_bottom = 4.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_qd6w7"]
 font_size = 40
@@ -1154,6 +1159,21 @@ texture = ExtResource("5_dkicf")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15q2r"]
 texture = ExtResource("6_55l7p")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6gw30"]
+content_margin_left = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("22_lmm84")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmyuw"]
+content_margin_left = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("23_b86us")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8hsc"]
+content_margin_left = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("24_hp72c")
+
 [sub_resource type="Animation" id="Animation_4so66"]
 length = 0.001
 tracks/0/type = "value"
@@ -1249,11 +1269,27 @@ _data = {
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j6ev"]
 texture = ExtResource("23_b86us")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74wpe"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hxjx"]
 texture = ExtResource("22_lmm84")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7pdx"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkbhu"]
+texture = ExtResource("23_b86us")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74wpe"]
+texture = ExtResource("24_hp72c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7g50"]
+content_margin_left = 99.0
+content_margin_top = 34.0
+content_margin_right = 99.0
+content_margin_bottom = 34.0
 texture = ExtResource("22_lmm84")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77dia"]
+texture = ExtResource("23_b86us")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7pdx"]
+texture = ExtResource("24_hp72c")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1335,11 +1371,11 @@ layout_mode = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15
-anchor_top = 0.665
-anchor_right = 0.865
+anchor_top = 0.682
+anchor_right = 0.712
 anchor_bottom = 0.752
-offset_top = 11.08
-offset_right = -1.285
+offset_top = 0.0639648
+offset_right = 59.915
 offset_bottom = 14.704
 scale = Vector2(0.78956, 0.833269)
 size_flags_vertical = 3
@@ -1433,7 +1469,8 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ljy5w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5l6dc")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3eb6u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_sjl31")
-text = "+"
+icon = ExtResource("15_pece4")
+icon_alignment = 1
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -3451,7 +3488,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_q6ijb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_15q2r")
 text = "Exit"
 
-[node name="Button" type="Button" parent="NodoMenu"]
+[node name="Menu" type="Button" parent="NodoMenu"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.022
@@ -3460,8 +3497,13 @@ anchor_right = 0.062
 anchor_bottom = 0.972
 offset_left = -0.344002
 offset_top = 0.151978
-offset_right = -0.424004
-offset_bottom = 0.143982
+offset_right = 25.576
+offset_bottom = 26.144
+scale = Vector2(0.698316, 0.7)
+theme_override_styles/hover = SubResource("StyleBoxTexture_6gw30")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mmyuw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a8hsc")
+icon = ExtResource("32_8a1ri")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NodoMenu"]
 libraries = {
@@ -3526,6 +3568,8 @@ theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_8j6ev")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6hxjx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fkbhu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_74wpe")
 icon = ExtResource("35_vovic")
 icon_alignment = 1
@@ -3540,6 +3584,8 @@ offset_left = 2.0
 offset_top = 0.0019989
 offset_right = 0.00799942
 offset_bottom = 0.0199966
+theme_override_styles/hover = SubResource("StyleBoxTexture_o7g50")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_77dia")
 theme_override_styles/normal = SubResource("StyleBoxTexture_v7pdx")
 icon = ExtResource("36_1aobl")
 icon_alignment = 1
@@ -3635,7 +3681,7 @@ layout_mode = 2
 [connection signal="mouse_exited" from="Mapa/lineaE/estaciones/Control" to="Mapa/lineaE/estaciones/Control" method="_on_control_51_mouse_exited"]
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Main_Menu" to="NodoMenu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="NodoMenu/Filtro_Clicks/Menu/MenuButton/Exit" to="NodoMenu" method="_on_exit_pressed"]
-[connection signal="pressed" from="NodoMenu/Button" to="NodoMenu" method="_on_button_pressed"]
+[connection signal="pressed" from="NodoMenu/Menu" to="NodoMenu" method="_on_button_pressed"]
 [connection signal="pressed" from="NodoSeleccion/Panel/BotonOrigen" to="NodoSeleccion" method="_on_boton_origen_pressed"]
 [connection signal="pressed" from="NodoSeleccion/Panel/BotonDestino" to="NodoSeleccion" method="_on_boton_destino_pressed"]
 [connection signal="close_requested" from="RoutePopup" to="." method="_on_route_popup_close_requested"]
