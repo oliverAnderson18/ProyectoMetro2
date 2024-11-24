@@ -69,6 +69,7 @@ func populate_popup(start_station, grouped_path, final_station, transfers):
 		# Toggle button creation
 		var toggle_button = Button.new()
 		toggle_button.text = "Mostrar Estaciones"
+		toggle_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		line_details.add_child(toggle_button)
 		
 		# Hidden container for station names
