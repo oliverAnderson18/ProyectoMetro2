@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://bk63wmtlleaop"]
+[gd_scene load_steps=80 format=4 uid="uid://bk63wmtlleaop"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
@@ -1159,6 +1159,8 @@ texture = ExtResource("5_dkicf")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15q2r"]
 texture = ExtResource("6_55l7p")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sy0pe"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6gw30"]
 content_margin_left = 4.0
 content_margin_bottom = 4.0
@@ -1266,6 +1268,8 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyue3"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa8io"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j6ev"]
 texture = ExtResource("23_b86us")
 
@@ -1278,11 +1282,9 @@ texture = ExtResource("23_b86us")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74wpe"]
 texture = ExtResource("24_hp72c")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7g50"]
-content_margin_left = 99.0
-content_margin_top = 34.0
-content_margin_right = 99.0
-content_margin_bottom = 34.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5o2e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75rgv"]
 texture = ExtResource("22_lmm84")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77dia"]
@@ -3500,6 +3502,8 @@ offset_top = 0.151978
 offset_right = 25.576
 offset_bottom = 26.144
 scale = Vector2(0.698316, 0.7)
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sy0pe")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6gw30")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mmyuw")
 theme_override_styles/normal = SubResource("StyleBoxTexture_a8hsc")
@@ -3564,9 +3568,11 @@ offset_top = -0.0400002
 offset_right = 0.00799942
 offset_bottom = -0.0220032
 scale = Vector2(1.00143, 0.998073)
+mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa8io")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_8j6ev")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6hxjx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fkbhu")
@@ -3582,9 +3588,11 @@ anchor_right = 0.979
 anchor_bottom = 0.99
 offset_left = 2.0
 offset_top = 0.0019989
-offset_right = 0.00799942
-offset_bottom = 0.0199966
-theme_override_styles/hover = SubResource("StyleBoxTexture_o7g50")
+offset_right = 0.00799561
+offset_bottom = 0.019989
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y5o2e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_75rgv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_77dia")
 theme_override_styles/normal = SubResource("StyleBoxTexture_v7pdx")
 icon = ExtResource("36_1aobl")

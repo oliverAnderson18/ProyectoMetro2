@@ -12,6 +12,12 @@ extends Control
 @onready var controladores_lineaD: Array = get_tree().get_nodes_in_group("lineaDControlador")
 @onready var controladores_lineaE: Array = get_tree().get_nodes_in_group("lineaEControlador")
 
+@onready var boton_origen = $Panel/BotonOrigen
+@onready var boton_destino = $Panel/BotonDestino
+
+@onready var pressed_style: StyleBox = boton_origen.get_theme_stylebox("pressed")
+@onready var normal_style: StyleBox = boton_origen.get_theme_stylebox("normal")
+
 signal elegir_estacion_mapa
 
 var en_estacion: bool = false
@@ -133,12 +139,30 @@ func _on_boton_origen_pressed() -> void:
 	else:
 		modo_seleccion = 0 
 	
+	_change_button_style()
 	
 func _on_boton_destino_pressed() -> void:
 	if modo_seleccion != 2:
 		modo_seleccion = 2
 	else:
 		modo_seleccion = 0
+	
+	_change_button_style()
+
+
+
+func _change_button_style() -> void:
+	match modo_seleccion:
+		1:
+			boton_destino.add_theme_stylebox_override("normal", normal_style)
+			boton_origen.add_theme_stylebox_override("normal", pressed_style)
+		2:
+			boton_origen.add_theme_stylebox_override("normal", normal_style)
+			boton_destino.add_theme_stylebox_override("normal", pressed_style)
+		_:
+			boton_origen.add_theme_stylebox_override("normal", normal_style)
+			boton_destino.add_theme_stylebox_override("normal", normal_style)
+		pass
 
 func _get_station_name(id) -> void:
 	ID_estacion = int(id)
