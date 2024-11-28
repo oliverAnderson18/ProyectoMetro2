@@ -52,6 +52,11 @@ func load_scene() -> void:
 @onready var mas_button = $MasInfo
 @onready var popup2 = $RoutePopup
 
+signal inicio_animacion
+var ejecucion_animacion = false
+@onready var mapa: Node2D = $Mapa
+
+
 func _ready() -> void:
 	$NodoRuta/CalcularRuta.connect("pressed", Callable(self, "_button_combined"))
 	mas_button.connect("pressed", Callable(self, "_toggle_pop_up_window"))
@@ -79,14 +84,40 @@ func on_calcular_ruta_button_pressed():
 	python_call.run_python_script(id_origen, id_destino, selected_day, selected_hour, selected_minute)
 	
 
+
 func make_arist(list_stations_id: Array) -> Array:
+	var lista_conjunta = Array()
 	var list_id_arist = Array()
+	var list_id_train_animation = Array()
 	for i in range(len(list_stations_id) - 1):
 		if str(list_stations_id[i])[0] == str(list_stations_id[i + 1])[0]:
 			list_id_arist.append("Mapa/conexiones/" + str(list_stations_id[i] * list_stations_id[i + 1]))
+			if list_stations_id[i] > list_stations_id[i + 1]:
+				var direction_animation = Array()
+				direction_animation.append("Mapa/animacion_metro/" + str(list_stations_id[i] * list_stations_id[i + 1]))
+				direction_animation.append(1)
+				list_id_train_animation.append(direction_animation)
+			else:
+				var direction_animation = Array()
+				direction_animation.append("Mapa/animacion_metro/" + str(list_stations_id[i] * list_stations_id[i + 1]))
+				direction_animation.append(-1)
+				list_id_train_animation.append(direction_animation)
 		else:
 			list_id_arist.append("Mapa/conexiones/" + str(list_stations_id[i] * list_stations_id[i + 1] * 100))
-	return list_id_arist
+			if list_stations_id[i] > list_stations_id[i + 1]:
+				var direction_animation = Array()
+				direction_animation.append("Mapa/animacion_metro/" + str(list_stations_id[i] * list_stations_id[i + 1] * 100))
+				direction_animation.append(1)
+				list_id_train_animation.append(direction_animation)
+			else:
+				var direction_animation = Array()
+				direction_animation.append("Mapa/animacion_metro/" + str(list_stations_id[i] * list_stations_id[i + 1] * 100))
+				direction_animation.append(-1)
+				list_id_train_animation.append(direction_animation)
+
+	lista_conjunta.append(list_id_arist)
+	lista_conjunta.append(list_id_train_animation)
+	return lista_conjunta 
 
 func _on_button_pressed():
 	for node in target_nodes:
@@ -100,18 +131,59 @@ func desocultar(lista_aristas):
 		var nodo = get_node(arista)
 		nodo.visible = true
 
+func animar_tren(nodos, direcciones):
+	for arista in range(len(nodos.get_children())):
+		nodos.get_children()[arista].inicializar = 0
+		nodos.get_children()[arista].direction = direcciones[arista]
+		nodos.get_children()[arista].is_moving = true
+		await nodos.get_children()[arista].animacion_tren
+
+func ultimo_nodo(nodos):
+	return nodos.get_children()[-1]
+
+func crear_animacion(lista_animacion_train):
+	var nodo_animacion = Node2D.new()
+	mapa.add_child(nodo_animacion)
+	var direcciones = Array()
+	for arista in lista_animacion_train:
+		var nodo = get_node(arista[0])
+		direcciones.append(arista[1])
+		var clone = nodo.duplicate()
+		nodo_animacion.add_child(clone)
+	var resultado = [nodo_animacion, direcciones]
+	return resultado
+		
 
 func _button_combined():
 	_on_button_pressed()
 	on_calcular_ruta_button_pressed()
-	
-	# Process route details
-	var id_path = GlobalData.path_ids
-	var lista_aristas = make_arist(id_path)
-	desocultar(lista_aristas)
-	
+	var ruta = GlobalData.path
+	var tiempo = GlobalData.travel_duration
+	if not ejecucion_animacion:
+		var id_path = GlobalData.path_ids
+		var lista_conjunta = make_arist(id_path)
+		var lista_aristas = lista_conjunta[0] 
+		var lista_animacion_train = lista_conjunta[1]
+		desocultar(lista_aristas)
+		var resultado = crear_animacion(lista_animacion_train)
+		ejecucion_animacion = true
+		animar_tren(resultado[0], resultado[1])
+	else:
+		var nodo_ultimo = ultimo_nodo(mapa)
+		nodo_ultimo.queue_free()
+		ejecucion_animacion = false
+		if not ejecucion_animacion:
+			var id_path = GlobalData.path_ids
+			var lista_conjunta = make_arist(id_path)
+			var lista_aristas = lista_conjunta[0] 
+			var lista_animacion_train = lista_conjunta[1]
+			desocultar(lista_aristas)
+			var resultado = crear_animacion(lista_animacion_train)
+			ejecucion_animacion = true
+			animar_tren(resultado[0], resultado[1])
+			
 	_show_button_mas_info()
-	
+	print(GlobalData.grouped_path[0])
 	var start_station = GlobalData.grouped_path[0]["stations"][0]
 	var final_station = GlobalData.grouped_path[-1]["stations"][-1]
 	popup2.populate_popup(start_station, GlobalData.grouped_path, final_station, GlobalData.transfers)
