@@ -1,3 +1,4 @@
+Node3D
 CheckButton
 AudioStreamPlayer
 HBoxContainer
@@ -11,5 +12,3 @@ Sprite2D
 Node2D
 VScrollBar
 Label
-Window
-Popup
